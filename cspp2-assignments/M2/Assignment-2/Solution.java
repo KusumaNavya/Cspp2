@@ -6,7 +6,7 @@ public class Solution {
     /**
     @param args Do not modify this main function.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -14,7 +14,7 @@ public class Solution {
         rootsOfQuadraticEquation(a, b, c);
     }
     /**
-    @param a 
+    @param a
     @param b
     @param c Need to write the rootsOfQuadraticEquation function.
     */
