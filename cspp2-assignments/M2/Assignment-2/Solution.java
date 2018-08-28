@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/*
+/**
 *
 */
 public class Solution {
@@ -14,10 +14,15 @@ public class Solution {
         rootsOfQuadraticEquation(a, b, c);
         
     }
-    /*
-    Need to write the rootsOfQuadraticEquation function and print the output.
+    /**
+    @param a 
+    @param b 
+    @param c Need to write the rootsOfQuadraticEquation function and print the output.
     */
     public static void rootsOfQuadraticEquation(final int a,final int b,final int c) {
+        /*
+        *
+        */
         double x = ((b * b) - (4 * a * c));
         double r1, r2;
         r1 = (-b + Math.sqrt(x)) / (2 * a);
