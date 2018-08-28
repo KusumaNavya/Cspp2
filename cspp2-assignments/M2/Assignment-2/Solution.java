@@ -12,14 +12,13 @@ public class Solution {
         int b = scan.nextInt();
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
-        
     }
     /**
     @param a 
-    @param b 
-    @param c Need to write the rootsOfQuadraticEquation function and print the output.
+    @param b
+    @param c Need to write the rootsOfQuadraticEquation function.
     */
-    public static void rootsOfQuadraticEquation(final int a,final int b,final int c) {
+    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         /*
         *
         */
