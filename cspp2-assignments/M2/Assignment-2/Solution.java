@@ -3,6 +3,8 @@ import java.util.Scanner;
 *
 */
 public final class Solution {
+
+    private static final int FOUR = 4;
     /**
     *
     **/
@@ -29,7 +31,7 @@ public final class Solution {
         /*
         *
         */
-        double x = ((b * b) - (4 * a * c));
+        double x = ((b * b) - (FOUR * a * c));
         double r1, r2;
         r1 = (-b + Math.sqrt(x)) / (2 * a);
         r2 = (-b - Math.sqrt(x)) / (2 * a);
