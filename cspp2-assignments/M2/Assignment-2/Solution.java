@@ -14,11 +14,13 @@ public class Solution {
         rootsOfQuadraticEquation(a, b, c);
     }
     /**
-    @param a
-    @param b
+    @param a Need to write the rootsOfQuadraticEquation function.
+    @param b Need to write the rootsOfQuadraticEquation function.
     @param c Need to write the rootsOfQuadraticEquation function.
     */
-    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    public static void rootsOfQuadraticEquation(final int a,
+                                                final int b,
+                                                final int c) {
         /*
         *
         */
