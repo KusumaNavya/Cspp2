@@ -1,8 +1,10 @@
 import java.util.Scanner;
-
+/*
+*
+*/
 public class Solution {
-    /*
-    Do not modify this main function.
+    /**
+    @param args Do not modify this main function.
     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -15,7 +17,7 @@ public class Solution {
     /*
     Need to write the rootsOfQuadraticEquation function and print the output.
     */
-    public static void rootsOfQuadraticEquation(int a, int b, int c) {
+    public static void rootsOfQuadraticEquation(final int a,final int b,final int c) {
         double x = ((b * b) - (4 * a * c));
         double r1, r2;
         r1 = (-b + Math.sqrt(x)) / (2 * a);
