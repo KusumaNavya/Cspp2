@@ -3,7 +3,9 @@ import java.util.Scanner;
 *
 */
 public final class Solution {
-
+/**
+    *
+    **/
     private static final int FOUR = 4;
     /**
     *
@@ -39,3 +41,4 @@ public final class Solution {
     }
 
 }
+
