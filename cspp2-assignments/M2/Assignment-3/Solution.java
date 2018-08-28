@@ -9,9 +9,9 @@ public final class Solution {
     private Solution() {
     }
     /**
-    @param argsDo not modify this main function.
+    @param args Do not modify this main function.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
