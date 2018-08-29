@@ -14,7 +14,7 @@ public class Solution {
         for (i=1; i < n ;i += 1 ) {
         	int temp = i;
         	while (temp != 0) {
-        		if (i % 10 == 7 || i/10 == 7) {
+        		if (i % 10 == 7) {
         		count = count + 1 ;
         		}	
         		temp = temp / 10;
