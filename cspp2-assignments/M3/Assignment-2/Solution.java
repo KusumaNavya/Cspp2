@@ -9,6 +9,13 @@ public class Solution {
     /**no of 7s.
 *
 */
+    private Solution() {
+
+        //private function
+    }
+    /**no of 7s.
+*
+*/
     private static final int SEVEN = 7;
     /**no of 7s.
 *
