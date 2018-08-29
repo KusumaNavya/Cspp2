@@ -11,7 +11,10 @@ public final class Solution {
 
         //private function
     }
-    public static void main(final String[] args) {
+/**
+*
+*/
+     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
@@ -19,7 +22,7 @@ public final class Solution {
         System.out.println(gcd);
     }
     /**
-    Need to write the gcd function and print the output.  
+    Need to write the gcd function and print the output.
     @param      n1    The n 1
     @param      n2    The n 2
     @return     { description_of_the_return_value }
