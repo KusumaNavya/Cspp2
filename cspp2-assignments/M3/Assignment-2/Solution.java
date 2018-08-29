@@ -12,7 +12,7 @@ public class Solution {
         int count = 0;
         int i;
         for (i=1; i < n ;i += 1 ) {
-        	if (i % 10 == 7 && i/10 == 7) {
+        	if (i % 10 == 7 || i/10 == 7) {
         		count = count + 1 ;
         	}
 
