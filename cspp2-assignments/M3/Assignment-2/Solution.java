@@ -12,9 +12,15 @@ public class Solution {
         int count = 0;
         int i;
         for (i=1; i < n ;i += 1 ) {
-        	if (i % 10 == 7 || i/10 == 7) {
+        	int temp = i;
+        	while (temp != 0) {
+        		if (i % 10 == 7 || i/10 == 7) {
         		count = count + 1 ;
+        		}	
+        		temp = temp / 10;
+
         	}
+        	
 
         } 
         System.out.println(count);  
