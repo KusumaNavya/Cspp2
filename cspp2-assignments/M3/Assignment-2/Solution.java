@@ -6,7 +6,9 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 public class Solution {
-/**
+    private static final int SEVEN = 7;
+    private static final int TEN = 10;
+/**.
  * Fill the main function to print the number of 7's between 1 to n
  *
  * @param      args  The arguments
@@ -20,10 +22,10 @@ public class Solution {
         for (i = 1; i < n; i += 1) {
             int temp = i;
             while (temp != 0) {
-                if (temp % 10 == 7) {
+                if (temp % TEN == SEVEN) {
                 count = count + 1;
                 }
-                temp = temp / 10;
+                temp = temp / TEN;
 
             }
         }
