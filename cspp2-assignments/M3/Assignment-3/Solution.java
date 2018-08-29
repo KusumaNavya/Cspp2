@@ -1,9 +1,16 @@
 
 import java.util.Scanner;
-/*
+/**
     Do not modify this main function.
     */
 public final class Solution {
+    /**
+*
+*/
+    private Solution() {
+
+        //private function
+    }
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
