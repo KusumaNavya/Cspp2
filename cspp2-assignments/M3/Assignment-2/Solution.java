@@ -1,4 +1,6 @@
-
+/*no of 7s.
+*
+*/
 import java.util.Scanner;
 /*
     Do not modify this main function.
@@ -15,7 +17,7 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         int i;
-        for (i = 1;i < n;i += 1) {
+        for (i = 1; i < n; i += 1) {
             int temp = i;
             while (temp != 0) {
                 if (temp % 10 == 7) {
