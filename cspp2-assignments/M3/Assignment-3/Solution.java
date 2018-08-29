@@ -12,21 +12,20 @@ public final class Solution {
         System.out.println(gcd);
     }
     /**
-    Need to write the gcd function and print the output.
-    
+    Need to write the gcd function and print the output.  
     @param      n1    The n 1
     @param      n2    The n 2
     @return     { description_of_the_return_value }
     */
-    public static int gcd(int n1, int n2) {
+    public static int gcd(final int n1,final int n2) {
         int min = 0;
         if (n1 < n2) {
             min = n1;
         } else {
             min = n2;
         }
-        for (int i = min; i > 1 ; i--) {
-            if(n1 % i == 0 && n2 % i == 0) {
+        for(int i = min; i > 1 ; i--) {
+            if (n1 % i == 0 && n2 % i == 0) {
                 return i;
             }
         }
