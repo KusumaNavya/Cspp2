@@ -12,7 +12,7 @@ public final class Solution {
         //private function
     }
 /**
-*
+*@param args
 */
      public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -27,14 +27,14 @@ public final class Solution {
     @param      n2    The n 2
     @return     { description_of_the_return_value }
     */
-    public static int gcd(final int n1,final int n2) {
+    public static int gcd(final int n1, final int n2) {
         int min = 0;
         if (n1 < n2) {
             min = n1;
         } else {
             min = n2;
         }
-        for(int i = min; i > 1 ; i--) {
+        for (int i = min; i > 1 ; i--) {
             if (n1 % i == 0 && n2 % i == 0) {
                 return i;
             }
