@@ -6,10 +6,16 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 public class Solution {
+    /*no of 7s.
+*
+*/
     private static final int SEVEN = 7;
+    /*no of 7s.
+*
+*/
     private static final int TEN = 10;
-/**.
- * Fill the main function to print the number of 7's between 1 to n
+/**
+ * . Fill the main function to print the number of 7's between 1 to n
  *
  * @param      args  The arguments
  */
