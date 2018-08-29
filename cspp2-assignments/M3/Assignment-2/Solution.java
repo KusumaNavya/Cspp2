@@ -1,16 +1,16 @@
-/*no of 7s.
+/**no of 7s.
 *
 */
 import java.util.Scanner;
-/*
+/**
     Do not modify this main function.
     */
 public class Solution {
-    /*no of 7s.
+    /**no of 7s.
 *
 */
     private static final int SEVEN = 7;
-    /*no of 7s.
+    /**no of 7s.
 *
 */
     private static final int TEN = 10;
