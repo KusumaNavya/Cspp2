@@ -11,8 +11,11 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         int i = 0;
-        for (i=7; i < n ;i += 10 ) {
-        	count = count +1;
+        for (i=1; i < n ;i += 1 ) {
+        	if (i % 10 == 7) {
+        		count = count + 1 ;
+        	}
+
         } 
         System.out.println(count);  
     }
