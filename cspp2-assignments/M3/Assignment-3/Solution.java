@@ -12,7 +12,7 @@ public final class Solution {
         //private function
     }
 /**
-*@param args
+*@param args main function
 */
      public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -34,7 +34,7 @@ public final class Solution {
         } else {
             min = n2;
         }
-        for (int i = min; i > 1 ; i--) {
+        for (int i = min;i > 1 ;i--) {
             if (n1 % i == 0 && n2 % i == 0) {
                 return i;
             }
