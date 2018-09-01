@@ -6,6 +6,27 @@ import java.util.Scanner;
  * @author : 
  */
 final class Solution {
+    private static final int FIFTY = 50;
+    private static final int ONEFIFTY = 150;
+    private static final int TWOFIFTY = 250;
+    private static final int THREEFIFTY = 350;
+    private static final int FOURFIFTY = 450;
+    private static final int FIVEFIFTY = 550;
+    private static final int SIXFIFTY = 650;
+    private static final int SEVENFIFTY = 750;
+    private static final int EIGHTFIFTY = 850;
+    private static final int NINEFIFTY = 950;
+    private static final int THOUSANDFIFTY = 1050;
+    private static final int HUNDRED = 100;
+    private static final int TWOHUNDRED = 200;
+    private static final int THREEHUNDRED = 300;
+    private static final int FOURHUNDRED = 400;
+    private static final int FIVEHUNDRED = 500;
+    private static final int SIXHUNDRED = 600;
+    private static final int SEVENHUNDRED = 700;
+    private static final int EIGHTHUNDRED = 800;
+    private static final int NINEHUNDRED = 900;
+    private static final int THOUSAND = 1000;
     /**
      * Constructs the object.
      */
@@ -24,30 +45,30 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 // write your code here
-        for (int i = 0; i <= rows-1; i++) {
-            for (int j = 0; j <= columns-1; j++) {
-                if (a[i][j] >= 0 && a[i][j] <= 50) {
+        for (int i = 0; i <= rows - 1; i++) {
+            for (int j = 0; j <= columns - 1; j++) {
+                if (a[i][j] >= 0 && a[i][j] <= FIFTY) {
                     a[i][j] = 0;
-                 } else if (a[i][j] >= 50 && a[i][j] <= 150) {
-                    a[i][j] = 100;
-                } else if (a[i][j] >= 150 && a[i][j] <= 250) {
-                    a[i][j] = 200;
-                } else if (a[i][j] >= 250 && a[i][j] <= 350) {
-                    a[i][j] = 300;
-                } else if (a[i][j] >= 350 && a[i][j] <= 450) {
-                    a[i][j] = 400;
-                } else if (a[i][j] >= 450 && a[i][j] <= 550) {
-                    a[i][j] = 500;
-                } else if (a[i][j] >= 550 && a[i][j] <= 650) {
-                    a[i][j] = 600;
-                } else if (a[i][j] >= 650 && a[i][j] <= 750) {
-                    a[i][j] = 700;
-                } else if (a[i][j] >= 750 && a[i][j] <= 850) {
-                    a[i][j] = 800;
-                } else if (a[i][j] >= 850 && a[i][j] <= 950) {
-                    a[i][j] = 900;
-                } else if (a[i][j] >= 950 && a[i][j] <= 1050) {
-                    a[i][j] = 1000;
+                 } else if (a[i][j] >= FIFTY && a[i][j] <= ONEFIFTY) {
+                    a[i][j] = HUNDRED;
+                } else if (a[i][j] >= ONEFIFTY && a[i][j] <= TWOFIFTY) {
+                    a[i][j] = TWOHUNDRED;
+                } else if (a[i][j] >= TWOFIFTY && a[i][j] <= THREEFIFTY) {
+                    a[i][j] = THREEHUNDRED;
+                } else if (a[i][j] >= THREEFIFTY && a[i][j] <= FOURFIFTY) {
+                    a[i][j] = FOURHUNDRED;
+                } else if (a[i][j] >= FOURFIFTY && a[i][j] <= FIVEFIFTY) {
+                    a[i][j] = FIVEHUNDRED;
+                } else if (a[i][j] >= FIVEFIFTY && a[i][j] <= SIXFIFTY) {
+                    a[i][j] = SIXHUNDRED;
+                } else if (a[i][j] >= SIXFIFTY && a[i][j] <= SEVENFIFTY) {
+                    a[i][j] = SEVENHUNDRED;
+                } else if (a[i][j] >= SEVENFIFTY && a[i][j] <= EIGHTFIFTY) {
+                    a[i][j] = EIGHTHUNDRED;
+                } else if (a[i][j] >= EIGHTFIFTY && a[i][j] <= NINEFIFTY) {
+                    a[i][j] = NINEHUNDRED;
+                } else if (a[i][j] >= NINEFIFTY && a[i][j] <= THOUSANDFIFTY) {
+                    a[i][j] = THOUSAND;
                 }
             }
         }
