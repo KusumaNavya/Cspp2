@@ -76,7 +76,7 @@ final class Solution {
     private static final int SIXHUNDRED = 600;
     /**.
      * { var_description }
-     */   
+     */
     private static final int SEVENHUNDRED = 700;
     /**.
      * { var_description }
