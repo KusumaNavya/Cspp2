@@ -25,7 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 // write your code here
         for (int i = 0; i <= rows; i++) {
-            for (int j = 0; j < columns-1; j++) {
+            for (int j = 0; j <= columns; j++) {
                 if (a[i][j] >= 0 || a[i][j] <= 50) {
                     a[i][j] = 0;
                  }
@@ -59,8 +59,9 @@ final class Solution {
                 else if (a[i][j] >= 950 || a[i][j] <= 1050) {
                     a[i][j] = 1000;
                 }
+            }
         }
-    }  return (a);     
+        return a;       
     }
     /**
      * Main function.
