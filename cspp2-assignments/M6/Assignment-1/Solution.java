@@ -3,9 +3,13 @@ import java.util.Scanner;
  * Write a java program to find the odd composite numbers
  * between 2 and n where n is given as an input.
  *
- * @author : 
+ * @author :
  */
 public final class Solution {
+    /**magic number.
+*
+*/
+    private static final int THREE = 3;
     /**
     * Empty constructor.
     */
@@ -23,7 +27,7 @@ public final class Solution {
         for (int i = 2; i <= n; i++) {
             if (i % 2 != 0) {
                 c = 0;
-                for(int j = 3; j < i;j++) {
+                for (int j = THREE; j < i; j++) {
                     if (i % j == 0) {
                         c++;
                     }
