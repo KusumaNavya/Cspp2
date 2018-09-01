@@ -6,26 +6,89 @@ import java.util.Scanner;
  * @author : 
  */
 final class Solution {
+    /**
+     * { var_description }
+     */
     private static final int FIFTY = 50;
+    /**
+     * { var_description }
+     */
     private static final int ONEFIFTY = 150;
+    /**
+     * { var_description }
+     */
     private static final int TWOFIFTY = 250;
+    /**
+     * { var_description }
+     */
     private static final int THREEFIFTY = 350;
+    /**
+     * { var_description }
+     */
     private static final int FOURFIFTY = 450;
+    /**
+     * { var_description }
+     */
     private static final int FIVEFIFTY = 550;
+    /**
+     * { var_description }
+     */
     private static final int SIXFIFTY = 650;
+    /**
+     * { var_description }
+     */
     private static final int SEVENFIFTY = 750;
+    /**
+     * { var_description }
+     */
     private static final int EIGHTFIFTY = 850;
+    /**
+     * { var_description }
+     */
     private static final int NINEFIFTY = 950;
+    /**
+     * { var_description }
+     */
     private static final int THOUSANDFIFTY = 1050;
+    /**
+     * { var_description }
+     */
     private static final int HUNDRED = 100;
+    /**
+     * { var_description }
+     */
     private static final int TWOHUNDRED = 200;
+    /**
+     * { var_description }
+     */
     private static final int THREEHUNDRED = 300;
+    /**
+     * { var_description }
+     */
     private static final int FOURHUNDRED = 400;
+    /**
+     * { var_description }
+     */
     private static final int FIVEHUNDRED = 500;
+    /**
+     * { var_description }
+     */
     private static final int SIXHUNDRED = 600;
+    /**
+     * { var_description }
+     */   
     private static final int SEVENHUNDRED = 700;
+    /**
+     * { var_description }
+     */
     private static final int EIGHTHUNDRED = 800;
+    /**
+     * { var_description }
+     */
     private static final int NINEHUNDRED = 900;
+    /**
+     * { var_description }
+     */
     private static final int THOUSAND = 1000;
     /**
      * Constructs the object.
