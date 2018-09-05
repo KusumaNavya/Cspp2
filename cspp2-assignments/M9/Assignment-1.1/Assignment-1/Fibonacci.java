@@ -28,7 +28,7 @@ public class Fibonacci
      */
     public static List fib(int n) {
         // todo - complete this method
-        List list = new List();
+        List list = new List(n);
         int x = 0, y = 1, z;
         list.add(x);
         list.add(y);
@@ -40,7 +40,6 @@ public class Fibonacci
         }
         return list;
     }
-
 	public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
