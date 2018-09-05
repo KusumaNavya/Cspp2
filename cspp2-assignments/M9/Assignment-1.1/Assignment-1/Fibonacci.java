@@ -15,12 +15,12 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-public class Fibonacci {
-    /*
+public final class Fibonacci {
+    /**
     *
-    */
+    **/
     private Fibonacci() {
-
+        // private
     }
     /**
      * fib is a static method takes a argument n n is the count of the fibonacci
