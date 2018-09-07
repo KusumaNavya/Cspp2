@@ -59,7 +59,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
@@ -195,8 +195,8 @@ public class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
-    /**
+    }
+    /**.
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
@@ -205,7 +205,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return (indexOf(item) != -1);
     }
@@ -229,7 +229,7 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list
     */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
        if (size + newArray.length >= list.length) {
         resize();
        }
@@ -247,11 +247,11 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-    public void removeAll(int[] newArray) {
-        // write the logic 
+    public void removeAll(final int[] newArray) {
+        // write the logic
         // for (int i = 0; i <= newArray.length; i++ ) {
         //     remove(indexOf(newArray[i]));
-        for (int i = 0; i < newArray.length; i++ ) {
+        for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
                 remove(i);
@@ -262,7 +262,7 @@ public class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -279,19 +279,18 @@ public class List {
         if (start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        }
-        else {
+        } else {
             for (int i = start; i < end; i++) {
                     l1.add(list[i]);
-            }
-            return l1;
+        }
+        return l1;
         }
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list) 
+    public boolean equals(final List list) 
     {
     // Replace the code below
         // int count = 0;
