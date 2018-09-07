@@ -303,15 +303,19 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(final List compList) {
     // Replace the code below
-        // int count = 0;
-        // for (int i = 0; i < lis.size(); i++ ) {
-        //     if(contains(lis.get(i))) {
-        //         count ++;
-        //     }
-        return list.toString().equals(this.toString());
-    }
+        if (size != compList.size()) {
+            return false;
+        } else {
+        for (int i = 0; i < size; i++) {
+            if (list[i] != compList.get(i)) {
+            return false;
+       }
+     }
+   }
+   return true;
+ }
     /**
      * Removes all the elements from list Think about this case and make the
      * method the simpler.
