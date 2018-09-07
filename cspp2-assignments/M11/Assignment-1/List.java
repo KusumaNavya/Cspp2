@@ -200,7 +200,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return (indexOf(item) >= 0);
+        return (indexOf(item) != -1);
     }
     /**
      * Returns the index of the first occurrence of the specified element in
@@ -242,8 +242,14 @@ public class List {
     */
     public void removeAll(int[] newArray) {
         // write the logic 
-        for (int i = 0; i <= newArray.length; i++ ) {
-            remove(indexOf(newArray[i]));
+        // for (int i = 0; i <= newArray.length; i++ ) {
+        //     remove(indexOf(newArray[i]));
+        for (int i = 0; i < newArray.length; i++ ) {
+            int index = indexOf(newArray[i]);
+            while (index != -1) {
+                remove(i);
+                index = indexOf(newArray[i]);
+            }
         }
     }
     /*
@@ -257,32 +263,39 @@ public class List {
     {
     // write the logic for subList
         //created a new object with name 'l' and assigned the sublist to 'l'.
-        List l = new List();
-        int size = 0;
-        if (start < 0 || end < 0 || start > end) {
+        // List l = new List();
+        // int size = 0;
+        List newList = new List();
+        if (start >= end) {
             System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else if (start < 0 || end < 0) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
         } else {
-            for (int i = start; i <= end; i++) {
-                l.add(list[i]);
-                size++;
-            }
+            // for (int i = start; i < end; i++) {
+            //     l.add(list[i]);
+            //     size++;
+            
+            for (int i = start; i < end; i++) {
+                newList.add(this.get(i));
+            }     
         }
-    return l;
+        return newList;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List lis) 
+    public boolean equals(List list) 
     {
     // Replace the code below
-        int count = 0;
-        for (int i = 0; i < lis.size(); i++ ) {
-            if(contains(lis.get(i))) {
-                count ++;
-            }
-        }
-    return (count == lis.size());
+        // int count = 0;
+        // for (int i = 0; i < lis.size(); i++ ) {
+        //     if(contains(lis.get(i))) {
+        //         count ++;
+        //     }
+        return list.toString().equals(this.toString());
     }
     /*
     * Removes all the elements from list
