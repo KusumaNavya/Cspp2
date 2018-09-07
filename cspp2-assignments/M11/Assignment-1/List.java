@@ -38,7 +38,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -62,7 +61,6 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -78,14 +76,11 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-
     }
-    
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -125,7 +120,6 @@ public class List {
         // replace the code below to implement the size method
         return size;
     }
-
     /**
      * The remove method does what the name suggests. Removes an int item,
      * specified by the index argument, from the list It also does an additional
@@ -154,7 +148,6 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
     /**
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
@@ -168,7 +161,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 && index >= size) {
             return -1;
@@ -224,7 +217,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -234,7 +227,7 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     public void addAll(int[] newArray) {
        if (size + newArray.length >= list.length) {
@@ -279,17 +272,14 @@ public class List {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-
         if (start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-
         if (start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        
         else {
             for (int i = start; i < end; i++) {
                     l1.add(list[i]);
@@ -321,11 +311,9 @@ public class List {
     // write the logic for clear.
         size = 0;
     }
-
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
