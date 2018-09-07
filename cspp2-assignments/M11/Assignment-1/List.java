@@ -104,6 +104,16 @@ public class List {
         }
     }
     /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
+
+    public List(final int capacity) {
+        size = 0;
+        list = new int[capacity];
+    }
+    /**
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
      *
@@ -234,7 +244,7 @@ public class List {
     *resize method
     */
     private void resize() {
-        list = Arrays.copyOf(list, 2*size);
+        list = Arrays.copyOf(list, 2 * size);
     }
     /*
      Removes all of its elements that are contained in the specified int
