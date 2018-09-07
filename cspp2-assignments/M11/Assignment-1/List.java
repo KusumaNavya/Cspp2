@@ -259,12 +259,12 @@ public class List {
         //created a new object with name 'l' and assigned the sublist to 'l'.
         List l = new List();
         int size = 0;
-        if (start < 0 || end < 0 || start > end) {
+        if (start < 0 && end < 0 && start > end) {
             System.out.println("Index Out of Bounds Exception");
         } else {
             for (int i = start; i < end; i++) {
-                 l.add(list[i]);
-                i++;
+                l.add(list[i]);
+                size++;
             }
         }
     return l;
