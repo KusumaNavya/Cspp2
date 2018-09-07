@@ -241,9 +241,9 @@ public class List {
             add(newArray[i]);
         }
     }
-    /*
+    /**
     *resize method
-    */
+    **/
     private void resize() {
         list = Arrays.copyOf(list, 2 * size);
     }
@@ -308,10 +308,10 @@ public class List {
         //     }
         return list.toString().equals(this.toString());
     }
-    /*
+    /**
      * Removes all the elements from list Think about this case and make the
      * method the simpler.
-     */
+     **/
     public void clear() {
     // write the logic for clear.
         size = 0;
