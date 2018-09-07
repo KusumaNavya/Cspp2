@@ -290,8 +290,7 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(final List list) 
-    {
+    public boolean equals(final List list) {
     // Replace the code below
         // int count = 0;
         // for (int i = 0; i < lis.size(); i++ ) {
@@ -305,8 +304,7 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
-    public void clear()
-    {
+    public void clear() {
     // write the logic for clear.
         size = 0;
     }
