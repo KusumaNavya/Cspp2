@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+ /**
+     * { item_description }.
+     */
 public class List {
     /**
      * { item_description }.
@@ -296,7 +299,7 @@ public class List {
     @param      list  The list
     @return     { description_of_the_return_value }
     */
-    boolean equals(final List list) {
+    public boolean equals(final List list) {
     // Replace the code below
         // int count = 0;
         // for (int i = 0; i < lis.size(); i++ ) {
@@ -313,7 +316,7 @@ public class List {
     // write the logic for clear.
         size = 0;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
