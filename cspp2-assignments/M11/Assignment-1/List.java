@@ -10,11 +10,11 @@ public class List {
         /**
         * int string array.
         */
-        private int[] list;
+    private int[] list;
         /**
          * { var_description }.
          */
-        private int size;
+    private int size;
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -276,7 +276,6 @@ public class List {
             // for (int i = start; i < end; i++) {
             //     l.add(list[i]);
             //     size++;
-            
             for (int i = start; i < end; i++) {
                 newList.add(this.get(i));
             }     
