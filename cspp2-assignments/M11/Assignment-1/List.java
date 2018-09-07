@@ -103,16 +103,16 @@ public class List {
         size++;
         }
     }
-    /**
+    /*
      * Constructs the object.
      *
      * @param      capacity  The capacity
      */
 
-    public List(final int capacity) {
-        size = 0;
-        list = new int[capacity];
-    }
+    // public List(final int capacity) {
+    //     size = 0;
+    //     list = new int[capacity];
+    // }
     /**
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
