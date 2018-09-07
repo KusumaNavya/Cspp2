@@ -264,7 +264,7 @@ public class List {
         } else {
             for (int i = start; i < end; i++) {
                  l.add(list[i]);
-                size++;
+                i++;
             }
         }
     return l;
