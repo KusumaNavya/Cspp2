@@ -259,28 +259,29 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end)
-    {
-    // write the logic for subList
-        //created a new object with name 'l' and assigned the sublist to 'l'.
-        // List l = new List();
-        // int size = 0;
-        List newList = new List();
-        if (start >= end) {
+    public List subList(final int start, final int end) {
+        List l1 = new List();
+        if (start <= 0 || end <= 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        } else if (start < 0 || end < 0) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        } else {
-            // for (int i = start; i < end; i++) {
-            //     l.add(list[i]);
-            //     size++;
-            for (int i = start; i < end; i++) {
-                newList.add(this.get(i));
-            }     
         }
-        return newList;
+
+        if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+
+        if (start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        
+        else {
+            for (int i = start; i < end; i++) {
+                    l1.add(list[i]);
+            }
+            return l1;
+        }
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
