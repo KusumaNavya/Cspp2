@@ -65,7 +65,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
@@ -226,8 +226,10 @@ public class List {
         }
         return -1;
     }
-    /*
+    /**
     Inserts all the elements of specified int array to the end of list
+    
+    @param      newArray  The new array
     */
     public void addAll(final int[] newArray) {
        if (size + newArray.length >= list.length) {
@@ -243,9 +245,10 @@ public class List {
     private void resize() {
         list = Arrays.copyOf(list, 2 * size);
     }
-    /*
-     Removes all of its elements that are contained in the specified int
-     array.
+    /**
+     Removes all of its elements that are contained in the specified int array.
+    
+     @param      newArray  The new array
     */
     public void removeAll(final int[] newArray) {
         // write the logic
@@ -259,12 +262,17 @@ public class List {
             }
         }
     }
-    /*
+    /**
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
+    
+    @param      start  The start
+    @param      end    The end
+    
+    @return     { description_of_the_return_value }
     */
     public List subList(final int start, final int end) {
         List l1 = new List();
@@ -286,9 +294,13 @@ public class List {
         return l1;
         }
     }
-    /*
+    /**
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
+    
+    @param      list  The list
+    
+    @return     { description_of_the_return_value }
     */
     public boolean equals(final List list) {
     // Replace the code below
@@ -300,14 +312,18 @@ public class List {
         return list.toString().equals(this.toString());
     }
     /*
-    * Removes all the elements from list
-    * Think about this case and make the method
-    * the simpler.
-    */
+     * Removes all the elements from list Think about this case and make the
+     * method the simpler.
+     */
     public void clear() {
     // write the logic for clear.
         size = 0;
     }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -380,7 +396,6 @@ public class List {
                 break;
                 case "subList": {
                     if (tokens.length != 2) {
-
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
@@ -395,7 +410,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
