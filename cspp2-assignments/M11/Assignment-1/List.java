@@ -296,10 +296,10 @@ public class List {
         return l1;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * . { function_description }
      *
-     * @param      list  The list
+     * @param      compList  The component list
      *
      * @return     { description_of_the_return_value }
      */
@@ -399,7 +399,7 @@ public class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -410,7 +410,6 @@ public class List {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
