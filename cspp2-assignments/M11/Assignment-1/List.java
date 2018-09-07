@@ -160,10 +160,10 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (index >= 0 && index < size) {
-            return list[index];
+        if (index > 0 && index >= size) {
+            return -1;
         }
-        return -1;
+        return list[index];
     }
     /**
      * What happens when you print an object using println? Java provides a
