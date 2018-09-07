@@ -228,7 +228,6 @@ public class List {
     }
     /**.
     Inserts all the elements of specified int array to the end of list
-    
     @param      newArray  The new array
     */
     public void addAll(final int[] newArray) {
@@ -297,7 +296,7 @@ public class List {
     @param      list  The list
     @return     { description_of_the_return_value }
     */
-    public boolean equals(final List list) {
+    boolean equals(final List list) {
     // Replace the code below
         // int count = 0;
         // for (int i = 0; i < lis.size(); i++ ) {
