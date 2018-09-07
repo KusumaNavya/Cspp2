@@ -241,9 +241,12 @@ public class List {
             add(newArray[i]);
         }
     }
-    /**
+    /**.
     *resize method
     **/
+    /**.
+     * { function_description }
+     */
     private void resize() {
         list = Arrays.copyOf(list, 2 * size);
     }
@@ -293,12 +296,13 @@ public class List {
         return l1;
         }
     }
-    /**
-    Returns a boolean indicating whether the parameter i.e a List object is
-    exactly matching with the given list or not.
-    @param      list  The list
-    @return     { description_of_the_return_value }
-    */
+    /**.
+     * { function_description }
+     *
+     * @param      list  The list
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(final List list) {
     // Replace the code below
         // int count = 0;
