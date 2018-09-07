@@ -226,7 +226,7 @@ public class List {
         }
         return -1;
     }
-    /**
+    /**.
     Inserts all the elements of specified int array to the end of list
     
     @param      newArray  The new array
@@ -247,7 +247,6 @@ public class List {
     }
     /**
      Removes all of its elements that are contained in the specified int array.
-    
      @param      newArray  The new array
     */
     public void removeAll(final int[] newArray) {
@@ -268,10 +267,8 @@ public class List {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-    
     @param      start  The start
     @param      end    The end
-    
     @return     { description_of_the_return_value }
     */
     public List subList(final int start, final int end) {
@@ -297,9 +294,7 @@ public class List {
     /**
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
-    
     @param      list  The list
-    
     @return     { description_of_the_return_value }
     */
     public boolean equals(final List list) {
