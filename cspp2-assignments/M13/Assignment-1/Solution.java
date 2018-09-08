@@ -59,7 +59,7 @@ class Set {
         for (int i = 0; i < size - 1; i++) {
             s += list[i] + ",";
         }
-        s += list[size - 1] + "}";
+        s += list[size] + "}";
         return s;
     }
 
@@ -123,7 +123,7 @@ class Set {
     //     // for (int i = 0; int i <= newS.length; i++) {
     //     //     for (int j = 0; j <= size; j++) {
     //     //         if  (newS{i} == list[j]) {
-                    
+
 
     //     //     }
     //     // }
