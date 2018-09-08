@@ -19,7 +19,7 @@ class Set {
     /**
      * Constructs the object.
      */
-    public Set () {
+    public Set() {
         this.list = new int[TEN];
         this.size = 0;
     }
@@ -43,7 +43,8 @@ class Set {
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return true;
-            }    
+            }
+            return false;    
         }
         return false;
     }
@@ -58,7 +59,7 @@ class Set {
         for (int i = 0; i < size - 1; i++) {
             s += list[i] + ",";
         }
-        s += list[size] + "}";
+        s += list[size - 1] + "}";
         return s;
     }
 
@@ -119,20 +120,19 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set intersection(Set newS) {
+        // for (int i = 0; int i <= newS.length; i++) {
+        //     for (int j = 0; j <= size; j++) {
+        //         if  (newS{i} == list[j]) {
+                    
 
-    return newS;
+        //     }
+        // }
     }
-
-    // public Set retainAll(int[] newA) {
-    //     return ;
-    // }
-
+    public Set retainAll(int[] newA) {
+        
+    }
     public int[][] cartesianProduct(Set newS) {
-        int[][] a =  {
-      {1, 2, 3}, 
-      {4, 5, 6, 9}, 
-      {7},};
-        return a;
+        
     }
 }
 /**
@@ -209,13 +209,13 @@ public final class Solution {
                 t.add(intArray);
                 System.out.println(s.intersection(t));
                 break;
-                // case "retainAll":
-                // s = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
-                // break;
+                case "retainAll":
+                s = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
                 case "cartesianProduct":
                 s = new Set();
                 t = new Set();
