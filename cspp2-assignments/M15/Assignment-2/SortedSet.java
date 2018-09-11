@@ -6,6 +6,9 @@ import java.util.Arrays;
  * Exception for signaling set empty errors.
  **/
 class SetEmptyException extends Exception {
+    /**
+    *
+    */
     SetEmptyException(final String s) {
         super(s);
     }
@@ -14,6 +17,9 @@ class SetEmptyException extends Exception {
  * Exception for signaling invalid subset selection errors.
  **/
 class InvalidSubsetSelectionException extends Exception {
+    /**
+    *
+    */
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
