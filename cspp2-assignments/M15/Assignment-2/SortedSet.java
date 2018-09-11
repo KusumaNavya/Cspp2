@@ -2,16 +2,25 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
     SetEmptyException(String s) {
         super(s);
     }
 }
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
     InvalidSubsetSelectionException(String s) {
         super(s);
     }
 }
+/**
+ * Class for sorted set.
+ */
 public class SortedSet extends Set {
     /**.
      * { function_description }
@@ -51,13 +60,15 @@ public class SortedSet extends Set {
         }
         return size();
     }
-    /**.
-     * { function_description }
+    /**
+     * . { function_description }
      *
-     * @param      fromele  The fromele
-     * @param      toele    The toele
+     * @param      fromele                          The fromele
+     * @param      toele                            The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
     public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
         if (fromele > toele) {
@@ -88,6 +99,13 @@ public class SortedSet extends Set {
             return subSet(get(0), toele);
         }
     }
+    /**
+     * { function_description }
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
