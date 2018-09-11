@@ -322,6 +322,22 @@ public class List {
         // write the logic for clear.
         size = 0;
     }
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
+        int c = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                c++;
+            }
+        }
+        return c;
+    }
     /**.
      * { function_description }
      *
@@ -436,6 +452,8 @@ public class List {
             case "clear":
                 l.clear();
                 break;
+            case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
             default:
                 break;
             }
