@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Exception for signaling set empty errors.
  */
 class SetEmptyException extends Exception {
-    SetEmptyException(String s) {
+    SetEmptyException(final String s) {
         super(s);
     }
 }
@@ -14,7 +14,7 @@ class SetEmptyException extends Exception {
  * Exception for signaling invalid subset selection errors.
  */
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s) {
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
@@ -22,10 +22,12 @@ class InvalidSubsetSelectionException extends Exception {
  * Class for sorted set.
  */
 public class SortedSet extends Set {
-    /**.
-     * { function_description }
+    /**
+     * . { function_description }
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
      */
     public int last() throws SetEmptyException {
         if (size() == 0) {
@@ -70,9 +72,11 @@ public class SortedSet extends Set {
      *
      * @throws     InvalidSubsetSelectionException  { exception_description }
      */
-    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromele, final int toele) 
+                        throws InvalidSubsetSelectionException {
         if (fromele > toele) {
-            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException(
+                                "Invalid Arguments to Subset Exception");
         } else {
             int fromindex = getIndex(fromele);
             int toindex = getIndex(toele);
@@ -84,12 +88,15 @@ public class SortedSet extends Set {
             return subset;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * . { function_description }
      *
-     * @param      toele  The toele
+     * @param      toele                            The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException                { exception_description }
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
     public int[] headset(final int toele) throws SetEmptyException,
         InvalidSubsetSelectionException {
