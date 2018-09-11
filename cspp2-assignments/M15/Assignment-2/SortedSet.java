@@ -7,8 +7,10 @@ import java.util.Arrays;
  **/
 class SetEmptyException extends Exception {
     /**
-    *
-    */
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
     SetEmptyException(final String s) {
         super(s);
     }
@@ -18,8 +20,10 @@ class SetEmptyException extends Exception {
  **/
 class InvalidSubsetSelectionException extends Exception {
     /**
-    *
-    */
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
