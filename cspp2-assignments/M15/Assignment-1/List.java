@@ -135,8 +135,10 @@ public class List {
      * to remove it is to move all the items, that are to the right of the
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
-      *
-     * @param      index  The index.
+     *
+     * @param      index      The index.
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here.
@@ -150,7 +152,7 @@ public class List {
             }
             list[size - 1] = 0;
             size--;
-        } 
+        }
     }
     /**
      * Get method has to return the items that is at the index position passed
@@ -253,7 +255,10 @@ public class List {
     }
     /**
      Removes all of its elements that are contained in the specified int array.
-     @param      newArray  The new array
+
+     @param      newArray   The new array
+
+     @throws     Exception  { exception_description }
     */
     public void removeAll(final int[] newArray) throws Exception {
         // write the logic
@@ -273,9 +278,13 @@ public class List {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-    @param      start  The start
-    @param      end    The end
+
+    @param      start      The start
+    @param      end        The end
+
     @return     { description_of_the_return_value }
+
+    @throws     Exception  { exception_description }
     */
     public List subList(final int start, final int end) throws Exception {
         List l1 = new List();
@@ -373,10 +382,9 @@ public class List {
             case "remove":
                 try {
                     if (tokens.length == 2) {
-                    l.remove(Integer.parseInt(tokens[1]));
+                        l.remove(Integer.parseInt(tokens[1]));
                     }
-                }
-                catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
                 }
                 break;
@@ -411,31 +419,29 @@ public class List {
             case "removeAll":
                 try {
                     if (tokens.length == 2) {
-                    String[] t2 = tokens[1].split(",");
-                    int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++) {
-                        a[i] = Integer.parseInt(t2[i]);
+                        String[] t2 = tokens[1].split(",");
+                        int[] a = new int[t2.length];
+                        for (int i = 0; i < t2.length; i++) {
+                            a[i] = Integer.parseInt(t2[i]);
+                        }
+                        l.removeAll(a);
                     }
-                    l.removeAll(a);
-                }
-                }
-                catch (Exception r) {
+                } catch (Exception r) {
                     System.out.println("Invalid Position Exception");
                 }
                 break;
             case "subList":
                 try {
                     if (tokens.length != 2) {
-                    break;
+                        break;
                     }
-                String[] arrstring3 = tokens[1].split(",");
-                List object = l.subList(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null) {
-                    System.out.println(object);
-                }
-                }
-                catch (Exception s) {
+                    String[] arrstring3 = tokens[1].split(",");
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
+                        System.out.println(object);
+                    }
+                } catch (Exception s) {
                     System.out.println("Index Out of Bounds Exception");
                 }
                 break;
