@@ -331,7 +331,7 @@ public class List {
         // write the logic for clear.
         size = 0;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
