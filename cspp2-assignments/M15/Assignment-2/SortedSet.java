@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Exception for signaling set empty errors.
- */
+ **/
 class SetEmptyException extends Exception {
     SetEmptyException(final String s) {
         super(s);
@@ -12,7 +12,7 @@ class SetEmptyException extends Exception {
 }
 /**
  * Exception for signaling invalid subset selection errors.
- */
+ **/
 class InvalidSubsetSelectionException extends Exception {
     InvalidSubsetSelectionException(final String s) {
         super(s);
@@ -72,11 +72,11 @@ public class SortedSet extends Set {
      *
      * @throws     InvalidSubsetSelectionException  { exception_description }
      */
-    public int[] subSet(final int fromele, final int toele) 
-                        throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromele, final int toele)
+    throws InvalidSubsetSelectionException {
         if (fromele > toele) {
             throw new InvalidSubsetSelectionException(
-                                "Invalid Arguments to Subset Exception");
+                "Invalid Arguments to Subset Exception");
         } else {
             int fromindex = getIndex(fromele);
             int toindex = getIndex(toele);
@@ -106,7 +106,7 @@ public class SortedSet extends Set {
             return subSet(get(0), toele);
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      s     { parameter_description }
