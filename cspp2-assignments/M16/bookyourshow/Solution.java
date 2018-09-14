@@ -151,6 +151,10 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+     /**
+     * initializing value of ten.
+     */
+    private static final int TEN = 10;
     /**
     *
     */
@@ -171,8 +175,8 @@ class BookYourShow {
      * Constructs the object.
      */
     BookYourShow() {
-        show = new Show[10];
-        patron = new Patron[10];
+        show = new Show[TEN];
+        patron = new Patron[TEN];
         scount = 0;
         pcount = 0;
     }
@@ -193,7 +197,7 @@ class BookYourShow {
      * { function_description }
      */
     public void sresize() {
-        show = Arrays.copyOf(show, scount + 5);
+        show = Arrays.copyOf(show, scount + 2);
     }
     /**
      * Adds an apatron.
@@ -212,7 +216,7 @@ class BookYourShow {
      * { function_description }
      */
     public void presize() {
-        patron = Arrays.copyOf(patron, pcount + 5);
+        patron = Arrays.copyOf(patron, pcount + 2);
     }
     /**
      * Gets a show.
@@ -224,7 +228,8 @@ class BookYourShow {
      */
     public Show getAShow(final String movie, final String datetime) {
         for (int i = 0; i < scount; i++) {
-            if ((movie.equals(show[i].getmoviename())) && (datetime.equals(show[i].getdateTime()))) {
+            if ((movie.equals(show[i].getmoviename())) && 
+                (datetime.equals(show[i].getdateTime()))) {
                 return show[i];
             }
         }
@@ -237,7 +242,8 @@ class BookYourShow {
      * @param      datetime   The datetime
      * @param      p          { parameter_description }
      */
-    public void bookAShow(final String moviename, final String datetime, final Patron p) {
+    public void bookAShow(final String moviename, final String datetime,
+                             final Patron p) {
         addApatron(p);
         Show availableshow = getAShow(moviename, datetime);
         if (availableshow != null) {
@@ -249,7 +255,8 @@ class BookYourShow {
             for (int i = 0; i < seat.length; i++) {
                 for (int j = 0; j < bookedseats.length; j++) {
                     // System.out.println(i + ", " + j);
-                    if (seat[i].equals(bookedseats[j]) && !seat[i].equals("N/A")) {
+                    if (seat[i].equals(bookedseats[j]) && 
+                            !seat[i].equals("N/A")) {
                         seat[i] = "N/A";
                     }
                 }
@@ -273,7 +280,8 @@ class BookYourShow {
      * @param      datetime  The datetime
      * @param      number    The number
      */
-    public void printTicket(final String movie, final String datetime, final String number) {
+    public void printTicket(final String movie, final String datetime,
+         final String number) {
         Show show = getAShow(movie, datetime);
         if (show != null) {
             for (int i = 0; i < pcount; i++) {
@@ -289,9 +297,9 @@ class BookYourShow {
     }
 }
 /**
-*main
-*
-*/public final class Solution {
+ * main
+ **/
+public final class Solution {
     /**
      * Constructs the object.
      */
