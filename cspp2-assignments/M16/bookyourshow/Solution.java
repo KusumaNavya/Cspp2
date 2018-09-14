@@ -24,11 +24,12 @@ class Show {
     /**
      * Constructs the object.
      *
-     * @param      moviename  The moviename
-     * @param      datetime   The datetime
-     * @param      seats      The seats
+     * @param      movienamee  The moviename
+     * @param      datetimee   The datetime
+     * @param      seatss      The seats
      */
-    Show(final String movienamee, final String datetimee, final String[] seatss) {
+    Show(final String movienamee, final String datetimee,
+         final String[] seatss) {
         this.moviename = movienamee;
         this.datetime = datetimee;
         this.seats = seatss;
@@ -103,11 +104,12 @@ class Patron {
     /**
      * Constructs the object.
      *
-     * @param      name         The name
-     * @param      number       The number
-     * @param      bookedseats  The bookedseats
+     * @param      namee         The name
+     * @param      numberr       The number
+     * @param      bookedseatss  The bookedseats
      */
-    Patron(final String namee, final String numberr, final String[] bookedseatss) {
+    Patron(final String namee, final String numberr, 
+        final String[] bookedseatss) {
         this.name = namee;
         this.number = numberr;
         this.bookedseats = bookedseatss;
