@@ -28,10 +28,10 @@ class Show {
      * @param      datetime   The datetime
      * @param      seats      The seats
      */
-    Show(final String moviename, final String datetime, final String[] seats) {
-        this.moviename = moviename;
-        this.datetime = datetime;
-        this.seats = seats;
+    Show(final String movienamee, final String datetimee, final String[] seatss) {
+        this.moviename = movienamee;
+        this.datetime = datetimee;
+        this.seats = seatss;
     }
     /**.
      * { function_description }
@@ -107,10 +107,10 @@ class Patron {
      * @param      number       The number
      * @param      bookedseats  The bookedseats
      */
-    Patron(final String name, final String number, final String[] bookedseats) {
-        this.name = name;
-        this.number = number;
-        this.bookedseats = bookedseats;
+    Patron(final String namee, final String numberr, final String[] bookedseatss) {
+        this.name = namee;
+        this.number = numberr;
+        this.bookedseats = bookedseatss;
     }
     /**.
      * { function_description }
