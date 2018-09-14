@@ -33,7 +33,7 @@ class Show {
         this.datetime = datetime;
         this.seats = seats;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -41,7 +41,7 @@ class Show {
     public String getmoviename() {
         return moviename;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -49,7 +49,7 @@ class Show {
     public String getdateTime() {
         return datetime;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -57,7 +57,7 @@ class Show {
     public String[] getseats() {
         return seats;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -83,19 +83,19 @@ class Show {
  * Class for patron.
  */
 class Patron {
-    /**
+    /**.
     *
     */
     private String name;
-    /**
+    /**.
     *
     */
     private String number;
-    /**
+    /**.
     *
     */
     private String[] bookedseats;
-    /**
+    /**.
      * Constructs the object.
      */
     Patron() {
@@ -112,7 +112,7 @@ class Patron {
         this.number = number;
         this.bookedseats = bookedseats;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -120,7 +120,7 @@ class Patron {
     public String getname() {
         return name;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -128,7 +128,7 @@ class Patron {
     public String getnumber() {
         return number;
     }
-    /**
+    /**.
      * Gets the booked seats.
      *
      * @return     The booked seats.
@@ -136,7 +136,7 @@ class Patron {
     public String[] getBookedSeats() {
         return bookedseats;
     }
-    /**
+    /**.
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
@@ -189,7 +189,7 @@ class BookYourShow {
             scount++;
         }
     }
-    /**
+    /**.
      * { function_description }
      */
     public void sresize() {
@@ -208,7 +208,7 @@ class BookYourShow {
             pcount++;
         }
     }
-    /**
+    /**.
      * { function_description }
      */
     public void presize() {
@@ -230,7 +230,7 @@ class BookYourShow {
         }
         return null;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      moviename  The moviename
@@ -266,7 +266,7 @@ class BookYourShow {
             System.out.println(show[i]);
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      movie     The movie
@@ -288,7 +288,7 @@ class BookYourShow {
         }
     }
 }
-/*
+/**
 *main
 *
 */public final class Solution {
