@@ -4,15 +4,15 @@ import java.util.Scanner;
  * Class for show.
  */
 class Show {
-    /*
+    /**
     *
     */
     private String moviename;
-    /*
+    /**
     *
     */
     private String datetime;
-    /*
+    /**
     *
     */
     private String[] seats;
@@ -83,15 +83,15 @@ class Show {
  * Class for patron.
  */
 class Patron {
-    /*
+    /**
     *
     */
     private String name;
-    /*
+    /**
     *
     */
     private String number;
-    /*
+    /**
     *
     */
     private String[] bookedseats;
@@ -151,23 +151,23 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
-    /*
+    /**
     *
     */
     private Show[] show;
-    /*
+    /**
     *
     */
     private Patron[] patron;
-    /*
+    /**
     *
     */
     private int scount;
-    /*
+    /**
     *
     */
     private int pcount;
-    /*
+    /**
      * Constructs the object.
      */
     BookYourShow() {
