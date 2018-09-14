@@ -228,7 +228,7 @@ class BookYourShow {
      */
     public Show getAShow(final String movie, final String datetime) {
         for (int i = 0; i < scount; i++) {
-            if ((movie.equals(show[i].getmoviename())) 
+            if ((movie.equals(show[i].getmoviename()))
                 && (datetime.equals(show[i].getdateTime()))) {
                 return show[i];
             }
@@ -255,7 +255,7 @@ class BookYourShow {
             for (int i = 0; i < seat.length; i++) {
                 for (int j = 0; j < bookedseats.length; j++) {
                     // System.out.println(i + ", " + j);
-                    if (seat[i].equals(bookedseats[j]) 
+                    if (seat[i].equals(bookedseats[j])
                         && !seat[i].equals("N/A")) {
                         seat[i] = "N/A";
                     }
@@ -282,8 +282,8 @@ class BookYourShow {
      */
     public void printTicket(final String movie, final String datetime,
          final String number) {
-        Show show = getAShow(movie, datetime);
-        if (show != null) {
+        Show showw = getAShow(movie, datetime);
+        if (showw != null) {
             for (int i = 0; i < pcount; i++) {
                 if (number.equals(patron[i].getnumber())) {
                     System.out.println(number + " " + movie + " " + datetime);
@@ -296,7 +296,7 @@ class BookYourShow {
         }
     }
 }
-/**
+/**.
  * main
  **/
 public final class Solution {
