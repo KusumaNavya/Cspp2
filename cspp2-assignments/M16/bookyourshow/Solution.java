@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 class Show {
-	private String movieName;
+	private String moviename;
 	private String datetime;
 	private String[] seats;
 
@@ -10,14 +10,14 @@ class Show {
 
 	}
 
-	Show(final String moviename, final String dateTime, final String[] seat) {
-		this.movieName = moviename;
-		this.datetime = dateTime;
-		this.seats = seat;
+	Show(final String moviename, final String datetime, final String[] seats) {
+		this.moviename = moviename;
+		this.datetime = datetime;
+		this.seats = seats;
 	}
 
 	public String getmoviename() {
-		return movieName;
+		return moviename;
 	}
 	public String getdateTime() {
 		return datetime;
@@ -27,12 +27,12 @@ class Show {
 	}
 	public String toStringWithoutTickets() {
         String s = "";
-        s += movieName + "," + datetime;
+        s += moviename + "," + datetime;
         return s;
     }
     public String toString() {
         String s = "";
-        s += movieName + "," + datetime + ",";
+        s += moviename + "," + datetime + ",";
         s += Arrays.toString(seats).replace(", ",",");
         return s;
     }
@@ -121,9 +121,12 @@ class BookYourShow {
 		if (availableshow != null) {
 			String[] seat = availableshow.getseats();
 			String[] bookedseats = p.getBookedSeats();
-			int i,j;
-			for (i = 0; i < seat.length; i++); {
-				for (j = 0; j < bookedseats.length; j++) {
+			// System.out.println(Arrays.toString(seat));
+			// System.out.println(Arrays.toString(bookedseats));
+			// System.out.println(seat.length + ", " + bookedseats.length);
+			for (int i = 0; i < seat.length; i++) {
+				for (int j = 0; j < bookedseats.length; j++) {
+					// System.out.println(i + ", " + j);
 					if (seat[i].equals(bookedseats[j]) && !seat[i].equals("N/A")) {
 						seat[i] = "N/A";
 					}
