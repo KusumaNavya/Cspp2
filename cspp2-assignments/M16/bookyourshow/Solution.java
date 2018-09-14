@@ -108,7 +108,7 @@ class Patron {
      * @param      numberr       The number
      * @param      bookedseatss  The bookedseats
      */
-    Patron(final String namee, final String numberr, 
+    Patron(final String namee, final String numberr,
         final String[] bookedseatss) {
         this.name = namee;
         this.number = numberr;
