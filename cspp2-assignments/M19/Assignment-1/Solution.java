@@ -79,8 +79,10 @@ public final class Solution {
         // add the question objects to the quiz class
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
+        } else {
+            System.out.println(questionCount + " are added to the quiz");
         }
-        System.out.println(questionCount + " are added to the quiz");
+        
     }
 
     /**
