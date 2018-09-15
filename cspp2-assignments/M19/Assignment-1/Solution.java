@@ -1,12 +1,27 @@
 import java.util.Scanner;
-/*
-*
-*/
+/**
+ * Class for quiz.
+ */
 class Quiz {
+/**
+ * 
+ */
     private int quiz;
+/**
+ * 
+ */
     private String questiontxt;
+/**
+ * 
+ */
     private int maxmark;
+/**
+ * 
+ */
     private int choice;
+    /**
+ * 
+ */
     Quiz() {
     }
     /**
@@ -17,13 +32,14 @@ class Quiz {
      * @param      maxmarkk      The maxmarkk
      * @param      choicee       The choicee
      */
-    Quiz(final int quizz, final String questiontxtt, final int maxmarkk, final int choicee) {
+    Quiz(final int quizz, final String questiontxtt, final int maxmarkk,
+         final int choicee) {
         this.quiz = quizz;
         this.questiontxt = questiontxtt;
         this.maxmark = maxmarkk;
         this.choice = choicee;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -31,7 +47,7 @@ class Quiz {
     public int getquiz() {
         return quiz;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -39,7 +55,7 @@ class Quiz {
     public String getquestiontxt() {
         return questiontxt;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -47,7 +63,7 @@ class Quiz {
     public int getmaxmark() {
         return maxmark;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -114,7 +130,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz,
+                                         final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -132,7 +149,8 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final Quiz quiz,
+                                    final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -140,7 +158,7 @@ public final class Solution {
             //System.out.println("question text " + quiz + "(" + s + ")");
         //}
     }
-    /**
+    /**.
      * Displays the score report
      *
      * @param      quiz     The quiz object
