@@ -1,8 +1,8 @@
 import java.util.Scanner;
 class Item {
-    String name;
-    int quantity;
-    double price;
+    protected String name;
+    protected int quantity;
+    protected double price;
     /**
      * Constructs the object.
      *
@@ -10,7 +10,7 @@ class Item {
      * @param      quantity  The quantity
      * @param      price     The price
      */
-    Item(String name, String quantity, String price) {
+    Item(final String name, final String quantity, final String price) {
         this.name = name;
         this.quantity = Integer.parseInt(quantity);
         this.price =  Double.parseDouble(price);
@@ -21,7 +21,7 @@ class Item {
      * @param      name      The name
      * @param      quantity  The quantity
      */
-    Item(String name, String quantity) {
+    Item(final String name, final String quantity) {
         this.name = name;
         this.quantity = Integer.parseInt(quantity);
     }
@@ -40,7 +40,7 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Item other) {
+    public boolean equals(final Item other) {
         if (this.name.equals(other.name)) {
             return true;
         }
@@ -72,7 +72,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    void addToCatalog(Item item) {
+    void addToCatalog(final Item item) {
         catalog[catalogSize++] = item;
     }
     /**.
@@ -80,7 +80,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    void addToCart(Item item) {
+    void addToCart(final Item item) {
         if (!inCart(item)) {
             if (checkCatalog(item)) {
                 cart[cartSize++] = item;
@@ -94,7 +94,7 @@ class ShoppingCart {
      *
      * @return     { description_of_the_return_value }
      */
-    boolean inCart(Item item) {
+    boolean inCart(final Item item) {
         for (Item s : cart) {
             if (s != null) {
                 if (s.equals(item)) {
@@ -112,7 +112,7 @@ class ShoppingCart {
      *
      * @return     { description_of_the_return_value }
      */
-    private boolean checkCatalog(Item given) {
+    private boolean checkCatalog(final Item given) {
         for (Item i : catalog) {
             if (i != null) {
                 if (i.equals(given)) {
@@ -131,7 +131,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    void removeFromCart(Item item) {
+    void removeFromCart(final Item item) {
         for (int i = 0; i < cartSize; i++) {
             if (item.equals(cart[i])) {
                 cart[i].quantity = cart[i].quantity - item.quantity;
@@ -176,7 +176,7 @@ class ShoppingCart {
      *
      * @return     The price.
      */
-    double getPrice(Item given) {
+    double getPrice(final Item given) {
         for (Item i : catalog) {
             if (i != null) {
                 if (i.equals(given)) {
@@ -191,7 +191,7 @@ class ShoppingCart {
      *
      * @param      cou   The cou
      */
-    void applyCoupon(String cou) {
+    void applyCoupon(final String cou) {
         boolean valid = false;
         for (String s : validCoupons) {
             if (s.equals(cou)) {
