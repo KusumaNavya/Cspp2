@@ -1,19 +1,31 @@
 import java.util.Scanner;
 class Quiz {
     private int quiz;
+    private String questiontxt;
+    private int maxmark;
+    private int choice;
 
     Quiz() {
-
     }
-
-    Quiz(final int quizz) {
+    Quiz(final int quizz, final String questiontxtt, final int maxmarkk, final int choicee) {
         this.quiz = quizz;
+        this.questiontxt = questiontxtt;
+        this.maxmark = maxmarkk;
+        this.choice = choicee;
+
     }
     public int getquiz() {
         return quiz;
     }
-
-
+    public String getquestiontxt() {
+        return questiontxt;
+    }
+    public int getmaxmark() {
+        return maxmark;
+    }
+    public int getchoice() {
+        return choice;
+    }
 }
 /**
  * Solution class for code-eval.
@@ -96,8 +108,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for (int i = 0; i <= answerCount; i++) {
-            System.out.println("question text " + quiz + "(" + s + ")");
+        System.out.println(quiz);
+        for (int i = 1; i <= answerCount; i++) {
+            //System.out.println("question text " + quiz + "(" + s + ")");
         }
     }
 
