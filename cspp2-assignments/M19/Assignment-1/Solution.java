@@ -4,23 +4,23 @@ import java.util.Scanner;
  */
 class Quiz {
 /**
- * 
+ *
  */
     private int quiz;
 /**
- * 
+ *
  */
     private String questiontxt;
 /**
- * 
+ *
  */
     private int maxmark;
 /**
- * 
+ *
  */
     private int choice;
-    /**
- * 
+/**
+ *
  */
     Quiz() {
     }
