@@ -108,9 +108,6 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        System.out.println(quiz);
-        System.out.println(s);
-        System.out.println(answerCount);
         for (int i = 1; i <= answerCount; i++) {
             //System.out.println("question text " + quiz + "(" + s + ")");
         }
