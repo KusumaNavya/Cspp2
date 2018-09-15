@@ -1,6 +1,19 @@
 import java.util.Scanner;
 class Quiz {
-    
+    private int quiz;
+
+    Quiz() {
+
+    }
+
+    Quiz(final int quizz) {
+        this.quiz = quizz;
+    }
+    public int getquiz() {
+        return quiz;
+    }
+
+
 }
 /**
  * Solution class for code-eval.
@@ -64,6 +77,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        
     }
 
     /**
