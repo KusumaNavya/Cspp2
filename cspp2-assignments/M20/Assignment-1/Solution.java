@@ -246,7 +246,7 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             String line = scan.nextLine();
             String[] tokens = line.split(":");
-            System.out.println(Arrays.toString(tokens));
+            //System.out.println(Arrays.toString(tokens));
             String[] choice = tokens[1].split(",");
             Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             if (tokens[0].equals("") && tokens[1].equals("") && tokens[2].equals("") && tokens[3].equals("") && tokens[4].equals("")) {
