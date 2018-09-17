@@ -249,7 +249,7 @@ public final class Solution {
             System.out.println(Arrays.toString(tokens));
             String[] choice = tokens[1].split(",");
             Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-            if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
+            if (tokens[0].equals("") && tokens[1].equals("") && tokens[2].equals("") && tokens[3].equals("") && tokens[4].equals("")) {
                 System.out.println("Error! Malformed question");
                 return;
             } else if (choice.length < 2) {
