@@ -243,18 +243,23 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         for (int i = 0; i < q; i++) {
-        String line = scan.nextLine();
-        String[] tokens = line.split(":");
-        String[] choice = tokens[1].split(",");
-        Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-        if(tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
-            System.out.println("Error! Malformed question");
-            return;
-        } else if(choice.length < 2) {
-            System.out.println(ques.getQuestionText() + " does not have enough answer choices");
-            return;
-    } 
-    }
+            String line = scan.nextLine();
+            String[] tokens = line.split(":");
+            String[] choice = tokens[1].split(",");
+            Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+            if(tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
+                System.out.println("Error! Malformed question");
+                return;
+            } else if(choice.length < 2) {
+                System.out.println(ques.getQuestionText() + " does not have enough answer choices");
+                return;
+            } else if (Integer.parseInt(tokens[3]) <= 0) {
+                System.out.println("Invalid max marks for " + ques.getQuestionText());
+                
+            } else if (Integer.parseInt(tokens[4]) >= 0) {
+                System.out.println("Invalid penalty for " + ques.getQuestionText());
+            }
+        }
         System.out.println(q +" are added to the quiz");
 }
     /**
