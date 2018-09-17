@@ -243,7 +243,7 @@ public final class Solution {
         String[] choice = tokens[1].split(",");
         if (q == 0) {
             System.out.println("Quiz does not have questions");
-        } else if(tokens[0] == "" || tokens[1] == "" || tokens[2] == "" || tokens[3] == "" || tokens[4] == "" || tokens[5] == "") {
+        } else if(tokens[0] == "" || tokens[1] == "" || tokens[2] == "" || tokens[3] == "" || tokens[4] == "") {
             System.out.println("Error! Malformed question");
 
         } else {
