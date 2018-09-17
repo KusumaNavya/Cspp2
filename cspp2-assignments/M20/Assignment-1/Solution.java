@@ -242,7 +242,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        for (int i = 0; i < q; i++) {
+        for (int i = 0; i <= q; i++) {
             String line = scan.nextLine();
             String[] tokens = line.split(":");
             String[] choice = tokens[1].split(",");
@@ -259,10 +259,11 @@ public final class Solution {
             } else if (Integer.parseInt(tokens[4]) >= 0) {
                 System.out.println("Invalid penalty for " + ques.getQuestionText());
                 return;
-            }
-            if (q == 0) {
-                System.out.println("Quiz does not have questions");
             } else {
+            // if (q == 0) {
+            //     System.out.println("Quiz does not have questions");
+
+            // } else {
                 System.out.println(q +" are added to the quiz");
             }
     }
