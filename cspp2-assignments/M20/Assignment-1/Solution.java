@@ -275,9 +275,10 @@ public final class Solution {
             //     System.out.println("Quiz does not have questions");
 
             // } else {
-                System.out.println(q +" are added to the quiz");
+                
             }
-    }
+         }
+         System.out.println(q +" are added to the quiz");
 }
     /**
      * Starts a quiz.
