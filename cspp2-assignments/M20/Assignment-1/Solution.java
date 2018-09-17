@@ -238,8 +238,14 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        String line = scan.nextLine();
+        String[] tokens = line.split(":");
+        String[] choice = tokens[1].split(",");
         if (q == 0) {
             System.out.println("Quiz does not have questions");
+        } else if(tokens[0] == "" || tokens[1] == "" || tokens[2] == "" || tokens[3] == "" || tokens[4] == "" || tokens[5] == "") {
+            System.out.println("Error! Malformed question");
+
         } else {
             System.out.println(q + " are added to the quiz");
         }
