@@ -44,7 +44,11 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
-
+        this.questiontext = question1;
+        this.choices = choices1;
+        this.correctAnswer = correctAnswer1;
+        this.maxMarks = maxMarks1;
+        this.penalty = penalty1;
     }
     /**
      * { function_description }.
@@ -70,7 +74,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-        return null;
+        return questiontext;
     }
     /**
      * Gets the choice.
@@ -238,15 +242,20 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        while(q > 0) {
         String line = scan.nextLine();
         String[] tokens = line.split(":");
         String[] choice = tokens[1].split(",");
+        Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
         if(tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
             System.out.println("Error! Malformed question");
+        } else if(choice.length < 2) {
+            System.out.println(ques.getQuestionText() + " does not have enough answer choices");
         } else {
             System.out.println(q + " are added to the quiz");
         }
     }
+}
     /**
      * Starts a quiz.
      *
