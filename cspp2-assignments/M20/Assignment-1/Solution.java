@@ -243,15 +243,21 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if (q == 0) {
+            System.out.println("Quiz does not have questions");
+            return;
+        }
         for (int i = 0; i < q; i++) {
             String line = scan.nextLine();
             String[] tokens = line.split(":");
             //System.out.println(Arrays.toString(tokens));
             String[] choice = tokens[1].split(",");
             Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-            if (tokens[0].equals("") && tokens[1].equals("") && tokens[2].equals("") && tokens[3].equals("") && tokens[4].equals("")) {
+            if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("")) {
                 System.out.println("Error! Malformed question");
                 return;
+            } else if (tokens[4].equals("")) {
+                System.out.println("Error! Malformed question");
             } else if (choice.length < 2) {
                 System.out.println(ques.getQuestionText() + " does not have enough answer choices");
                 return;
