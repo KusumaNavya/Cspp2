@@ -255,7 +255,7 @@ public final class Solution {
             if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("")) {
                 System.out.println("Error! Malformed question");
                 return;
-            } else if (tokens[4].equals("")) {
+            } else if (tokens[4].length() == 0) {
                 System.out.println("Error! Malformed question");
             } else if (choice.length < 2) {
                 System.out.println(tokens[0] + " does not have enough answer choices");
