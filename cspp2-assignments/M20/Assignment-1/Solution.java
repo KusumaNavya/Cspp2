@@ -252,7 +252,7 @@ public final class Solution {
         } else if(choice.length < 2) {
             System.out.println(ques.getQuestionText() + " does not have enough answer choices");
         } 
-        
+        System.out.println(q +" are added to the quiz");
     }
 }
     /**
