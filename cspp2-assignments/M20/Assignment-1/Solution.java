@@ -245,7 +245,7 @@ public final class Solution {
         if (q < 0) {
             System.out.println("Quiz does not have questions");
         } else {
-            for (int i = 0; i < q; i++) {
+            for (int i = 1; i < q; i++) {
                 String line = scan.nextLine();
                 String[] tokens = line.split(":");
                 String[] choice = tokens[1].split(",");
