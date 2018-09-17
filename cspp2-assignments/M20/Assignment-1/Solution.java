@@ -252,10 +252,11 @@ public final class Solution {
             String[] tokens = line.split(":");
             //System.out.println(Arrays.toString(tokens));
             String[] choice = tokens[1].split(",");
-            if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("")) {
-                System.out.println("Error! Malformed question");
-                return;
-            } else if (tokens.length < 5) {
+            // if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("")) {
+            //     System.out.println("Error! Malformed question");
+            //     return;
+            // } else 
+            if (tokens.length < 5) {
                 System.out.println("Error! Malformed question");
             } else if (choice.length < 2) {
                 System.out.println(tokens[0] + " does not have enough answer choices");
@@ -271,7 +272,6 @@ public final class Solution {
                 return;
             } else { 
                 Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-
             }
          }
 
