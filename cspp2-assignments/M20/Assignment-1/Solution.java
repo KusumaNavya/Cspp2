@@ -260,7 +260,11 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + ques.getQuestionText());
                 return;
             }
-            System.out.println(q +" are added to the quiz");
+            if (q == 0) {
+                System.out.println("Quiz does not have questions");
+            } else {
+                System.out.println(q +" are added to the quiz");
+            }
     }
 }
     /**
