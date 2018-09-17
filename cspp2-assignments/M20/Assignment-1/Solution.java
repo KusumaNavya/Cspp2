@@ -241,7 +241,7 @@ public final class Solution {
         String line = scan.nextLine();
         String[] tokens = line.split(":");
         String[] choice = tokens[1].split(",");
-        if(tokens[0] == "" || tokens[1] == "" || tokens[2] == "" || tokens[3] == "" || tokens[4] == "") {
+        if(tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
             System.out.println("Error! Malformed question");
         } else {
             System.out.println(q + " are added to the quiz");
