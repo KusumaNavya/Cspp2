@@ -265,7 +265,7 @@ public final class Solution {
             } else if (Integer.parseInt(tokens[3]) <= 0) {
                 System.out.println("Invalid max marks for " + tokens[0]);
                 return;
-            } else if (Integer.parseInt(tokens[4]) >= 0) {
+            } else if (Integer.parseInt(tokens[4]) > 0) {
                 System.out.println("Invalid penalty for " + tokens[0]);
                 return;
             } else if (Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choice.length) {
