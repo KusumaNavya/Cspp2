@@ -252,33 +252,29 @@ public final class Solution {
             String[] tokens = line.split(":");
             //System.out.println(Arrays.toString(tokens));
             String[] choice = tokens[1].split(",");
-            Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             if (tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("")) {
                 System.out.println("Error! Malformed question");
                 return;
             } else if (tokens[4].equals("")) {
                 System.out.println("Error! Malformed question");
             } else if (choice.length < 2) {
-                System.out.println(ques.getQuestionText() + " does not have enough answer choices");
+                System.out.println(tokens[0] + " does not have enough answer choices");
                 return;
             } else if (Integer.parseInt(tokens[3]) <= 0) {
-                System.out.println("Invalid max marks for " + ques.getQuestionText());
+                System.out.println("Invalid max marks for " + tokens[0]);
                 return;
             } else if (Integer.parseInt(tokens[4]) >= 0) {
-                System.out.println("Invalid penalty for " + ques.getQuestionText());
+                System.out.println("Invalid penalty for " + tokens[0]);
                 return;
             } else if (Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choice.length) {
-                System.out.println("Error! Correct answer choice number is out of range for " + ques.getQuestionText());
+                System.out.println("Error! Correct answer choice number is out of range for " + tokens[0]);
                 return;
-            } else {
-            // if (q == 0) {
-            //     System.out.println("Quiz does not have questions");
+            } else { 
+                Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 
-            // } else {
-                
             }
          }
-         System.out.println(q +" are added to the quiz");
+
 }
     /**
      * Starts a quiz.
