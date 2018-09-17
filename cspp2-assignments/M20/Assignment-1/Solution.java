@@ -251,9 +251,8 @@ public final class Solution {
             System.out.println("Error! Malformed question");
         } else if(choice.length < 2) {
             System.out.println(ques.getQuestionText() + " does not have enough answer choices");
-        } else {
-            System.out.println(q + " are added to the quiz");
-        }
+        } 
+        
     }
 }
     /**
