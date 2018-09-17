@@ -274,6 +274,7 @@ public final class Solution {
                 Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
             }
          }
+         System.out.println(q + " are added to the quiz");
 
 }
     /**
