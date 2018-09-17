@@ -259,6 +259,8 @@ public final class Solution {
             } else if (Integer.parseInt(tokens[4]) >= 0) {
                 System.out.println("Invalid penalty for " + ques.getQuestionText());
                 return;
+            } else {
+                System.out.println("Quiz does not have questions");
             }
         }
         System.out.println(q +" are added to the quiz");
