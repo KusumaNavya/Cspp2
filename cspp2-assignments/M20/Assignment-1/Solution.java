@@ -255,9 +255,10 @@ public final class Solution {
                 return;
             } else if (Integer.parseInt(tokens[3]) <= 0) {
                 System.out.println("Invalid max marks for " + ques.getQuestionText());
-                
+                return;
             } else if (Integer.parseInt(tokens[4]) >= 0) {
                 System.out.println("Invalid penalty for " + ques.getQuestionText());
+                return;
             }
         }
         System.out.println(q +" are added to the quiz");
