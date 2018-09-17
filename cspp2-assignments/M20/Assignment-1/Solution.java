@@ -242,7 +242,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        while(q > 0) {
+        for (int i = 0; i <= q; i++ ) {
         String line = scan.nextLine();
         String[] tokens = line.split(":");
         String[] choice = tokens[1].split(",");
@@ -251,9 +251,9 @@ public final class Solution {
             System.out.println("Error! Malformed question");
         } else if(choice.length < 2) {
             System.out.println(ques.getQuestionText() + " does not have enough answer choices");
-        } 
-        System.out.println(q +" are added to the quiz");
+    } 
     }
+        System.out.println(q +" are added to the quiz");
 }
     /**
      * Starts a quiz.
