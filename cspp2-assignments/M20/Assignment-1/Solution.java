@@ -267,6 +267,8 @@ public final class Solution {
             } else if (Integer.parseInt(tokens[4]) >= 0) {
                 System.out.println("Invalid penalty for " + ques.getQuestionText());
                 return;
+            } else if (Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choice.length) {
+                System.out.println("Error! Correct answer choice number is out of range for " + ques.getQuestionText());
             } else {
             // if (q == 0) {
             //     System.out.println("Quiz does not have questions");
