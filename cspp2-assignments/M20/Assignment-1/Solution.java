@@ -248,8 +248,10 @@ public final class Solution {
         Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
         if(tokens[0].equals("") || tokens[1].equals("") || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
             System.out.println("Error! Malformed question");
+            return;
         } else if(choice.length < 2) {
             System.out.println(ques.getQuestionText() + " does not have enough answer choices");
+            return;
     } 
     }
         System.out.println(q +" are added to the quiz");
