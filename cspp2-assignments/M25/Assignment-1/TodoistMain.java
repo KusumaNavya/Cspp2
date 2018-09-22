@@ -184,8 +184,9 @@ class Todoist {
     /**
      * Constructs the object.
      **/
-    public Todoist() {
-        task = new Task[TWENTY];
+    Todoist() {
+        final int n = TWENTY;
+        task = new Task[n];
         size = 0;
     }
     /**
