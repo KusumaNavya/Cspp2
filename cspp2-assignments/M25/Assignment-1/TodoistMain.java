@@ -44,7 +44,8 @@ class Task {
      * @param      statuss          The status
      * @throws Exception
      */
-    Task(final String titlee, final String assignedToo, final int timeToCompletee,
+    Task(final String titlee, final String assignedToo,
+        final int timeToCompletee,
         final boolean importantt, final boolean urgentt,
         final String statuss) throws Exception {
         this.assignedTo = assignedToo;
