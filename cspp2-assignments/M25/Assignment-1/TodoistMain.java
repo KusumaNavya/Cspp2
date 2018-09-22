@@ -106,10 +106,10 @@ class Todoist {
     /**.
      * Constructs the object.
      */
-    Todoist() {
-        // Task task = new Task[20];
-        size = 0;
-    }
+    // Todoist() {
+    //     // Task task = new Task[20];
+    //     size = 0;
+    //}
 }
 /**
  * Class for todoist main.
