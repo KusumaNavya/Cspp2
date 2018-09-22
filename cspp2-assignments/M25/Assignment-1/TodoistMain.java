@@ -231,9 +231,12 @@ class TodoistMain {
     */
     private static final int FIVE = 5;
     /**
-    *
-    */
+     * { var_description }
+     */
     private static final int SIX = 6;
+    private TodoistMain() {
+    
+    }
     /**
      * Starts a test.
      */
@@ -263,8 +266,8 @@ class TodoistMain {
             // case "total-time":
             //     System.out.println(todo.totalTime4Completion());
             // break;
-            // default:
-            //     break;
+            default:
+                break;
             }
         }
     }
