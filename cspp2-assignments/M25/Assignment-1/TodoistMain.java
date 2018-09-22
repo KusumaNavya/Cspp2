@@ -217,7 +217,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-public final class TodoistMain {
+class TodoistMain {
     /**
     *
     */
