@@ -1,20 +1,48 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
   * write your code below this comment
   */
 class Task {
+    /*
+    *
+    */
     private String title;
+    /*
+    *
+    */
     private String assignedTo;
+    /*
+    *
+    */
     private int timeToComplete;
+    /*
+    *
+    */
     private boolean important;
+    /*
+    *
+    */
     private boolean urgent;
+    /*
+    *
+    */
     private String status;
-
+    /**
+     * Constructs the object.
+     */
     Task() {
-
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      title           The title
+     * @param      assignedTo      The assigned to
+     * @param      timeToComplete  The time to complete
+     * @param      important       The important
+     * @param      urgent          The urgent
+     * @param      status          The status
+     */
     Task(final String title, final String assignedTo, final int timeToComplete, final boolean important, final boolean urgent, final String status) {
         this.title = title;
         this.assignedTo = assignedTo;
@@ -23,24 +51,59 @@ class Task {
         this.urgent = urgent;
         this.status = status;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String gettitle() {
         return title;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getassignedTo() {
         return assignedTo;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int gettimeToComplete() {
         return timeToComplete;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean getimportant() {
         return true;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean geturgent() {
         return true;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getstatus() {
         return status;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         String imp = "";
@@ -48,7 +111,7 @@ class Task {
         if (important) {
             imp = "Important";
         } else {
-            imp = "Not Important";   
+            imp = "Not Important";
         }
         if (urgent) {
             urg = "Urgent";
@@ -57,9 +120,12 @@ class Task {
         }
         s = title + ", " + assignedTo + ", " + timeToComplete + ", " + imp + ", " + urg + ", " + status;
         return s;
-        }
+    }
 
 }
+/**
+ * Class for todoist.
+ */
 class Todoist {
 
 }
@@ -78,27 +144,27 @@ public class TodoistMain {
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
-                case "task":
-                    testTask(tokens);
+            case "task":
+                testTask(tokens);
                 break;
-                case "add-task":
-                //     testAddTask(todo, tokens);
-                // break;
-                // case "print-todoist":
-                //     System.out.println(todo);
-                // break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
-                // case "get-next-n":
-                //     int n = Integer.parseInt(tokens[2]);
-                //     Task[] tasks = todo.getNextTask(tokens[1], n);
-                //     System.out.println(Arrays.deepToString(tasks));
-                // break;
-                // case "total-time":
-                //     System.out.println(todo.totalTime4Completion());
-                // break;
-                default:
+            case "add-task":
+            //     testAddTask(todo, tokens);
+            // break;
+            // case "print-todoist":
+            //     System.out.println(todo);
+            // break;
+            // case "get-next":
+            //     System.out.println(todo.getNextTask(tokens[1]));
+            // break;
+            // case "get-next-n":
+            //     int n = Integer.parseInt(tokens[2]);
+            //     Task[] tasks = todo.getNextTask(tokens[1], n);
+            //     System.out.println(Arrays.deepToString(tasks));
+            // break;
+            // case "total-time":
+            //     System.out.println(todo.totalTime4Completion());
+            // break;
+            default:
                 break;
             }
         }
@@ -148,7 +214,7 @@ public class TodoistMain {
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
         return new Task(
-            title, assignedTo, timeToComplete, important, urgent, status);
+                   title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
