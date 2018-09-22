@@ -217,7 +217,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-class TodoistMain {
+public final class TodoistMain {
     /**
     *
     */
@@ -231,11 +231,13 @@ class TodoistMain {
     */
     private static final int FIVE = 5;
     /**
-     * { var_description }
+     * . { var_description }
      */
     private static final int SIX = 6;
+    /**.
+    *
+    */
     private TodoistMain() {
-    
     }
     /**
      * Starts a test.
