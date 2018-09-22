@@ -172,47 +172,47 @@ class Todoist {
      /**
     *
     */
-    private static final int TWENTY = 20;
+   // private static final int TWENTY = 20;
     /**
     *
     **/
-    private Task[] task;
+    //private Task[] task;
      /**
      *
      **/
-    private int size;
+   // private int size;
     /**
      * Constructs the object.
      **/
-    Todoist() {
-        final int n = TWENTY;
-        task = new Task[n];
-        size = 0;
-    }
+    // Todoist() {
+    //     final int n = TWENTY;
+    //     task = new Task[n];
+    //     size = 0;
+   // }
     /**
      * Adds a task.
      *
      * @param      taskk  The taskk
      */
-    public void addTask(final Task taskk) {
-    task[size] = taskk;
-    size += 1;
-    }
+    // public void addTask(final Task taskk) {
+    // task[size] = taskk;
+    // size += 1;
+    //}
     /**
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
      */
-    public String toString() {
-    String s = "";
-    for (int i = 0; i < size; i++) {
-      s = s + task[i].getTitle() + ", " + task[i].getassignedTo() +  ", "
-            + task[i].gettimeToComplete() +  ", " + task[i].getImportant()
-            +  ", " + task[i].getUrgent() + ", " +  task[i].getStatus()
-            + "\n";
-    }
-    return s;
-    }
+    // public String toString() {
+    // String s = "";
+    // for (int i = 0; i < size; i++) {
+    //   s = s + task[i].getTitle() + ", " + task[i].getassignedTo() +  ", "
+    //         + task[i].gettimeToComplete() +  ", " + task[i].getImportant()
+    //         +  ", " + task[i].getUrgent() + ", " +  task[i].getStatus()
+    //         + "\n";
+    // }
+    // return s;
+    // }
 }
 /**
  * Class for todoist main.
@@ -246,9 +246,9 @@ public final class TodoistMain {
             case "task":
                 testTask(tokens);
                 break;
-            case "add-task":
-                testAddTask(todo, tokens);
-            break;
+            // case "add-task":
+            //     testAddTask(todo, tokens);
+            // break;
             // case "print-todoist":
             //     System.out.println(todo);
             // break;
@@ -275,14 +275,14 @@ public final class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    public static void testAddTask(final Todoist todo,
-     final String[] tokens) {
-        try {
-            todo.addTask(createTask(tokens));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
+    // public static void testAddTask(final Todoist todo,
+    //  final String[] tokens) {
+    //     try {
+    //         todo.addTask(createTask(tokens));
+    //     } catch (Exception e) {
+    //         System.out.println(e.getMessage());
+    //     }
+    // }
 
     /**
      * method to test the creation of task object.
