@@ -90,6 +90,80 @@ class Task {
             + imp + ", " + urg + ", " + status;
         return s;
     }
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
+    public String getTitle() {
+        return title;
+    }
+    /**
+    * gets the person assigned to.
+    *
+    * @return     assigned to.
+    */
+    public String getassignedTo() {
+        return assignedTo;
+    }
+    /**
+    * returns time.
+    *
+    * @return     time.
+    */
+    public int gettimeToComplete() {
+        return timeToComplete;
+    }
+
+    /**
+    * Gets the important.
+    *
+    * @return     The important.
+    */
+    public String getImportant() {
+        if (important) {
+            return "Important";
+        } else {
+            return "Not Important";
+        }
+    }
+
+    /**
+    * Gets the urgent.
+    *
+    * @return     The urgent.
+    */
+    public String getUrgent() {
+        if (urgent) {
+            return "Urgent";
+        } else {
+            return "Not Urgent";
+        }
+    }
+    /**
+    * Gets the status.
+    *
+    * @return     The status.
+    */
+    public String getStatus() {
+        return status;
+    }
+    /**
+    * Gets the imp.
+    *
+    * @return     The imp.
+    */
+    public boolean getImp() {
+        return important;
+    }
+    /**
+    * Gets the urg.
+    *
+    * @return     The urg.
+    */
+    public boolean getUrg() {
+        return urgent;
+    }
 }
 /**
  * Class for todoist.
@@ -98,23 +172,27 @@ class Todoist {
     /**
     *
     **/
-    // private String[] task;
-    // /**
-    // *
-    // **/
-    // private int size;
+    private Task[] task;
+     /**
+     *
+     **/
+    private int size;
     /**.
      * Constructs the object.
      */
-    // Todoist() {
-    //     // Task task = new Task[20];
-    //     size = 0;
-    //}
+    Todoist() {
+        task = new Task[20];
+        size = 0;
+    }
+    public void addTask(final Task taskk) {
+    task[size] = taskk;
+    size += 1;
+  }
 }
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
     *
     */
