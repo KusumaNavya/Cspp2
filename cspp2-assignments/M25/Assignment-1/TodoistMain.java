@@ -263,8 +263,8 @@ class TodoistMain {
             // case "total-time":
             //     System.out.println(todo.totalTime4Completion());
             // break;
-            default:
-                break;
+            // default:
+            //     break;
             }
         }
     }
