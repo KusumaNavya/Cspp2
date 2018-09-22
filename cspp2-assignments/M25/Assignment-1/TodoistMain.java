@@ -42,7 +42,7 @@ class Task {
      * @param      importantt       The important
      * @param      urgentt          The urgent
      * @param      statuss          The status
-     * @throws     <exception_object> { exception_description }
+     * @throws     Exception  if task inputs are invalid
      */
     Task(final String titlee, final String assignedToo,
         final int timeToCompletee,
@@ -108,18 +108,29 @@ class Todoist {
      */
     Todoist() {
         // Task task = new Task[20];
-        // size = 0; 
+        size = 0;
     }
 }
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
-        private static final int THREE = 3;
-        private static final int FOUR = 4;
-        private static final int FIVE = 5;
-        private static final int SIX = 6;
-
+    /*
+    *
+    */
+    private static final int THREE = 3;
+    /*
+    *
+    */
+    private static final int FOUR = 4;
+    /*
+    *
+    */
+    private static final int FIVE = 5;
+    /*
+    *
+    */
+    private static final int SIX = 6;
     /**
      * Starts a test.
      */
@@ -191,7 +202,8 @@ public class TodoistMain {
      *
      * @throws     Exception  if task inputs are invalid
      */
-    public static Task createTask(final String[] tokens) throws Exception {
+    public static Task createTask(final String[] tokens)
+    throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[THREE]);
