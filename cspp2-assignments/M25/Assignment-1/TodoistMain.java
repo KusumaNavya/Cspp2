@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-/**
+/**.
   * write your code below this comment
   */
 class Task {
@@ -42,8 +42,11 @@ class Task {
      * @param      importantt       The important
      * @param      urgentt          The urgent
      * @param      statuss          The status
+     * @throws Exception
      */
-    Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) throws Exception {
+    Task(final String titlee, final String assignedToo, final int timeToCompletee,
+        final boolean importantt, final boolean urgentt,
+        final String statuss) throws Exception {
         this.assignedTo = assignedToo;
         this.important = importantt;
         this.urgent = urgentt;
@@ -63,7 +66,6 @@ class Task {
             throw new Exception("Invalid status " + statuss);
         }
     }
-    
     /**
      * Returns a string representation of the object.
      *
@@ -83,16 +85,22 @@ class Task {
         } else {
             urg = "Not Urgent";
         }
-        s = title + ", " + assignedTo + ", " + timeToComplete + ", " + imp + ", " + urg + ", " + status;
+        s = title + ", " + assignedTo + ", " + timeToComplete + ", "
+            + imp + ", " + urg + ", " + status;
         return s;
     }
-
 }
 /**
  * Class for todoist.
  */
 class Todoist {
+    /*
+    *
+    */
     private String[] task;
+    /*
+    *
+    */
     private int size;
 
     Todoist() {
