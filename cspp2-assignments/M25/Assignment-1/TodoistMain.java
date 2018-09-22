@@ -98,11 +98,11 @@ class Todoist {
     /**
     *
     **/
-    private String[] task;
-    /**
-    *
-    **/
-    private int size;
+    // private String[] task;
+    // /**
+    // *
+    // **/
+    // private int size;
     /**.
      * Constructs the object.
      */
@@ -114,7 +114,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-class TodoistMain {
+public class TodoistMain {
     /**
     *
     */
@@ -193,7 +193,6 @@ class TodoistMain {
             System.out.println(e.getMessage());
         }
     }
-
     /**
      * Creates a task object.
      *
@@ -224,5 +223,3 @@ class TodoistMain {
         startTest();
     }
 }
-
-
