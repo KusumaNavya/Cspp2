@@ -42,7 +42,7 @@ class Task {
      * @param      importantt       The important
      * @param      urgentt          The urgent
      * @param      statuss          The status
-     * @throws Exception
+     * @throws     <exception_object> { exception_description }
      */
     Task(final String titlee, final String assignedToo,
         final int timeToCompletee,
@@ -95,25 +95,30 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
-    /*
+    /**
     *
-    */
+    **/
     private String[] task;
-    /*
+    /**
     *
-    */
+    **/
     private int size;
-
+    /**.
+     * Constructs the object.
+     */
     Todoist() {
         // Task task = new Task[20];
         // size = 0; 
     }
 }
-
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
+        private static final int THREE = 3;
+        private static final int FOUR = 4;
+        private static final int FIVE = 5;
+        private static final int SIX = 6;
 
     /**
      * Starts a test.
@@ -189,10 +194,10 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[THREE]);
+        boolean important = tokens[FOUR].equals("y");
+        boolean urgent = tokens[FIVE].equals("y");
+        String status = tokens[SIX];
         return new Task(
                    title, assignedTo, timeToComplete, important, urgent, status);
     }
