@@ -169,6 +169,10 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
+     /**
+    *
+    */
+    private static final int TWENTY = 20;
     /**
     *
     **/
@@ -177,17 +181,27 @@ class Todoist {
      *
      **/
     private int size;
-    /**.
+    /**
      * Constructs the object.
-     */
-    Todoist() {
-        task = new Task[20];
+     **/
+    public Todoist() {
+        task = new Task[TWENTY];
         size = 0;
     }
+    /**
+     * Adds a task.
+     *
+     * @param      taskk  The taskk
+     */
     public void addTask(final Task taskk) {
     task[size] = taskk;
     size += 1;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
     String s = "";
     for (int i = 0; i < size; i++) {
