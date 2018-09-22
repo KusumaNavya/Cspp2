@@ -51,16 +51,19 @@ class Task {
             this.title = titlee;
         } else {
             System.out.println("Title not provided");
+            return;
         }
         if (timeToCompletee >= 0) {
             this.timeToComplete = timeToCompletee;
         } else {
             System.out.println("Invalid timeToComplete " + timeToCompletee);
+            return;
         }
         if (statuss.equals("todo") || statuss.equals("done")) {
             this.status = statuss;
         } else {
             System.out.println("Invalid status " + statuss);
+            return;
         }
     }
     
