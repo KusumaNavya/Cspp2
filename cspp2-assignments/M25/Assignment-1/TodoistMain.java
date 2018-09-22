@@ -44,61 +44,26 @@ class Task {
      * @param      statuss          The status
      */
     Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) {
-        this.title = titlee;
         this.assignedTo = assignedToo;
-        this.timeToComplete = timeToCompletee;
         this.important = importantt;
         this.urgent = urgentt;
-        this.status = statuss;
+        if (titlee.length() > 0) {
+            this.title = titlee;
+        } else {
+            System.out.println("Title not provided");
+        }
+        if (timeToCompletee >= 0) {
+            this.timeToComplete = timeToCompletee;
+        } else {
+            System.out.println("Invalid timeToComplete " + timeToCompletee);
+        }
+        if (statuss.equals("todo") || statuss.equals("done")) {
+            this.status = statuss;
+        } else {
+            System.out.println("Invalid status " + statuss);
+        }
     }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public String gettitle() {
-        return title;
-    }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public String getassignedTo() {
-        return assignedTo;
-    }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int gettimeToComplete() {
-        return timeToComplete;
-    }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public boolean getimportant() {
-        return true;
-    }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public boolean geturgent() {
-        return true;
-    }
-    /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public String getstatus() {
-        return status;
-    }
+    
     /**
      * Returns a string representation of the object.
      *
@@ -147,7 +112,7 @@ public class TodoistMain {
             case "task":
                 testTask(tokens);
                 break;
-            case "add-task":
+            // case "add-task":
             //     testAddTask(todo, tokens);
             // break;
             // case "print-todoist":
