@@ -44,12 +44,24 @@ class Task {
      * @param      statuss          The status
      */
     Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) throws Exception {
-        this.title = titlee;
         this.assignedTo = assignedToo;
-        this.timeToComplete = timeToCompletee;
         this.important = importantt;
         this.urgent = urgentt;
-        this.status = statuss;
+        if (titlee.length() > 0) {
+            this.title = titlee;
+        } else {
+            throw new Exception("Title not provided");
+        }
+        if (timeToCompletee >= 0) {
+            this.timeToComplete = timeToCompletee;
+        } else {
+            throw new Exception("Invalid timeToComplete " + timeToCompletee);
+        }
+        if (statuss.equals("todo") || statuss.equals("done")) {
+            this.status = statuss;
+        } else {
+            throw new Exception("Invalid status " + statuss);
+        }
     }
     
     /**
