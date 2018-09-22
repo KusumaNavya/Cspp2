@@ -4,27 +4,27 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-    /*
+    /**
     *
     */
     private String title;
-    /*
+    /**
     *
     */
     private String assignedTo;
-    /*
+    /**
     *
     */
     private int timeToComplete;
-    /*
+    /**
     *
     */
     private boolean important;
-    /*
+    /**
     *
     */
     private boolean urgent;
-    /*
+    /**
     *
     */
     private String status;
@@ -36,20 +36,20 @@ class Task {
     /**
      * Constructs the object.
      *
-     * @param      title           The title
-     * @param      assignedTo      The assigned to
-     * @param      timeToComplete  The time to complete
-     * @param      important       The important
-     * @param      urgent          The urgent
-     * @param      status          The status
+     * @param      titlee           The title
+     * @param      assignedToo      The assigned to
+     * @param      timeToCompletee  The time to complete
+     * @param      importantt       The important
+     * @param      urgentt          The urgent
+     * @param      statuss          The status
      */
-    Task(final String title, final String assignedTo, final int timeToComplete, final boolean important, final boolean urgent, final String status) {
-        this.title = title;
-        this.assignedTo = assignedTo;
-        this.timeToComplete = timeToComplete;
-        this.important = important;
-        this.urgent = urgent;
-        this.status = status;
+    Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) {
+        this.title = titlee;
+        this.assignedTo = assignedToo;
+        this.timeToComplete = timeToCompletee;
+        this.important = importantt;
+        this.urgent = urgentt;
+        this.status = statuss;
     }
     /**
      * { function_description }
