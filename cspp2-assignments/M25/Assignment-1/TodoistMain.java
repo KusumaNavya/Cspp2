@@ -43,24 +43,27 @@ class Task {
      * @param      urgentt          The urgent
      * @param      statuss          The status
      */
-    Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) throws Exception {
+    Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) {
         this.assignedTo = assignedToo;
         this.important = importantt;
         this.urgent = urgentt;
         if (titlee.length() > 0) {
             this.title = titlee;
         } else {
-            throw new Exception("Title not provided");
+            System.out.println("Title not provided");
+            
         }
         if (timeToCompletee >= 0) {
             this.timeToComplete = timeToCompletee;
         } else {
-            throw new Exception("Invalid timeToComplete " + timeToCompletee);
+            System.out.println("Invalid timeToComplete " + timeToCompletee);
+            
         }
         if (statuss.equals("todo") || statuss.equals("done")) {
             this.status = statuss;
         } else {
-            throw new Exception("Invalid status " + statuss);
+            System.out.println("Invalid status " + statuss);
+
         }
     }
     
@@ -92,7 +95,13 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
+    private String[] task;
+    private int size;
 
+    Todoist() {
+        // Task task = new Task[20];
+        // size = 0; 
+    }
 }
 
 /**
