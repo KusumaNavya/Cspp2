@@ -115,19 +115,19 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
-    /*
+    /**
     *
     */
     private static final int THREE = 3;
-    /*
+    /**
     *
     */
     private static final int FOUR = 4;
-    /*
+    /**
     *
     */
     private static final int FIVE = 5;
-    /*
+    /**
     *
     */
     private static final int SIX = 6;
@@ -172,7 +172,8 @@ public class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    // public static void testAddTask(final Todoist todo, final String[] tokens) {
+    // public static void testAddTask(final Todoist todo,
+    //  final String[] tokens) {
     //     try {
     //         todo.addTask(createTask(tokens));
     //     } catch (Exception e) {
@@ -210,8 +211,8 @@ public class TodoistMain {
         boolean important = tokens[FOUR].equals("y");
         boolean urgent = tokens[FIVE].equals("y");
         String status = tokens[SIX];
-        return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+        return new Task(title, assignedTo, timeToComplete,
+                        important, urgent, status);
     }
 
     /**
