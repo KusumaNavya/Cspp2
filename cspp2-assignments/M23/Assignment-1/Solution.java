@@ -14,7 +14,6 @@ class Frequency {
         try {
             int c = 0;
             while ((str = reader.readLine()) != null) {
-                // String s = str.replaceAll("[;:.,\"\\[\\]/!@#$%^&*()]","");
                 String s = str.replaceAll("[^a-z A-Z 0-9 _]", "").toLowerCase();
                 String[] line = s.split(" ");
                 for (int i = 0; i < line.length; i++) {
@@ -26,14 +25,12 @@ class Frequency {
                     c++;
                 }
             }
-            // System.out.println("Words loaded" + c);
         } catch (Exception e) {
             throw new Exception("File not found");
         }
         return dictionary;
     }
 }
-
 class Distance {
     Distance() {
 
@@ -41,7 +38,6 @@ class Distance {
     public double Euclidean(Hashtable<String, Integer> dict1) {
         long sum = 0;
         for (Map.Entry<String, Integer> m : dict1.entrySet()) {
-            // int val = (int)m.getValue();
             sum += m.getValue() * m.getValue();
         }
         double prod = Math.sqrt(sum);
@@ -96,7 +92,6 @@ class Solution {
                         Distance d = new Distance();
                         s += d.similarity(f.loadWordstodict(file1), f.loadWordstodict(file2)) + "\t\t";
                     }
-                    // s = s.trim();
                     s += "\n";
                 }
                 System.out.println(s);
