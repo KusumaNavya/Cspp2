@@ -37,24 +37,24 @@ public final class Solution {
      */
     public static int lcs(final String doc1, final String doc2) {
         int lcsmax = 0, lcs = 0, temp = 0;
-        for (int indexi = 0; indexi < doc1.length() - 1; indexi++) {
-            int indexj = 0;
-            while (indexj < doc2.length() - 1) {
-                temp = indexi;
+        for (int i = 0; i < doc1.length() - 1; i++) {
+            int j = 0;
+            while (j < doc2.length() - 1) {
+                temp = i;
                 lcs = 0;
-                if (doc1.charAt(temp) == (doc2.charAt(indexj))
+                if (doc1.charAt(temp) == (doc2.charAt(j))
                         && doc1.charAt(temp) != ' ') {
-                    while (doc1.charAt(temp) == (doc2.charAt(indexj)) && indexj
+                    while (doc1.charAt(temp) == (doc2.charAt(j)) && j
                             < doc2.length() - 1 && temp < doc1.length() - 1) {
                         lcs++;
-                        indexj++;
+                        j++;
                         temp++;
                     }
                     if (lcs > lcsmax) {
                         lcsmax = lcs;
                     }
                 } else {
-                    indexj++;
+                    j++;
                 }
             }
         }
@@ -141,7 +141,6 @@ public final class Solution {
                     // System.out.println(str);
                     strlist[filecount++] = str.trim();
                 }
-                // System.out.println(Arrays.toString(strlist));
             } catch (FileNotFoundException e) {
                 System.out.println("file not found");
             }
@@ -153,18 +152,6 @@ public final class Solution {
                     if (i == j) {
                         matchpercentmat[i][j] = HUNDRED;
                     } else {
-    // int lcs = 0 , lcstemp = 0;
-    // // System.out.println(strlist[i] + "\n" + strlist[j]);
-    // for (String eachwordi : strlist[i].replace(".", " ").split(" ")) {
-    //  for (String eachwordj : strlist[j].replace(".", " ").split(" ")) {
-    //      if (eachwordi.equals(eachwordj) && eachwordi.length() > lcs) {
-    //          lcs = eachwordi.length();
-    //      }
-    //  }
-    // }
-    // matchpercentmat[i][j] = (lcs * 200)
-    // / (strlist[i].length() + strlist[j].length());
-
                         int lcsmax = 0;
                         if (!(strlist[i].equals("") || strlist[j]
                                 .equals(""))) {
