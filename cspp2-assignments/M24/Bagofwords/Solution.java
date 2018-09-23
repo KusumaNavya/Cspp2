@@ -13,7 +13,7 @@ public final class Solution {
      */
     private Solution() {
     }
-    /**
+    /**.
      * variable declaration
      */
     private static final int THIRTEEN = 13;
