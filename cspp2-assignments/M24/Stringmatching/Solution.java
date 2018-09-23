@@ -13,7 +13,6 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        //not used.
     }
     /**
      * variable declaration.
@@ -90,14 +89,12 @@ public final class Solution {
         for (int i = 0; i < fileListAsString.length; i++) {
             res += fileListAsString[i];
             for (int j = 0; j < fileListAsString.length; j++) {
-                // res += "\t" + matchpercentmat[i][j] + "\t";
                 int numberOfSpaces = THIRTEEN - (matchpercentmat[i][j] + "")
                                      .length();
                 for (int spindex = 0; spindex < numberOfSpaces; spindex++) {
                     res += " ";
                 }
                 res += matchpercentmat[i][j] + "";
-
             } res += " \n";
         }
         System.out.print(res);
@@ -129,7 +126,6 @@ public final class Solution {
             File folder = new File(foldername);
             File[] filelist = folder.listFiles();
             String[] strlist = new String[filelist.length];
-            // System.out.println(Arrays.toString(filelist));
             try {
                 int filecount = 0;
                 for (File file : filelist) {
@@ -144,7 +140,6 @@ public final class Solution {
             } catch (FileNotFoundException e) {
                 System.out.println("file not found");
             }
-
             float[][] matchpercentmat = new float[filelist.length]
             [filelist.length];
             for (int i = 0; i < filelist.length; i++) {
@@ -167,14 +162,9 @@ public final class Solution {
                     }
                 }
             }
-            // System.out.println(Arrays.toString(matchpercentmat));
-            // for (int i = 0; i < matchpercentmat.length; i++) {
-            //  System.out.println(Arrays.toString(matchpercentmat[i]));
-            // }
             printResult(matchpercentmat, filelist);
         } catch (Exception e) {
             System.out.println("Empty Directory");
         }
     }
 }
-
