@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ public final class Solution {
     private Solution() {
     }
     /**
-     * variable declaration.
+     * variable declaration
      */
     private static final int THIRTEEN = 13;
     /**
