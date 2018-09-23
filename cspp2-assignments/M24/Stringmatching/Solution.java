@@ -1,6 +1,6 @@
 /**
  * String matching.
- * @author 
+ * @author
  */
 import java.io.File;
 import java.io.FileNotFoundException;
