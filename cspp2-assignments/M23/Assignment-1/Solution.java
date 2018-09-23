@@ -4,15 +4,6 @@ class Frequency {
     Frequency() {
 
     }
-    /**
-     * Loads a wordstodict.
-     *
-     * @param      f          { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     *
-     * @throws     Exception  { exception_description }
-     */
     public Hashtable<String,Integer> loadWordstodict (File f)
     throws Exception {
         FileInputStream fileinp = new FileInputStream(f);
@@ -42,20 +33,11 @@ class Frequency {
         return dictionary;
     }
 }
-/**
- * Class for distance.
- */
+
 class Distance {
     Distance() {
 
     }
-    /**
-     * { function_description }
-     *
-     * @param      dict1  The dictionary 1
-     *
-     * @return     { description_of_the_return_value }
-     */
     public double Euclidean(Hashtable<String,Integer> dict1) {
         long sum = 0;
         for(Map.Entry<String, Integer> m: dict1.entrySet()) {
@@ -65,14 +47,6 @@ class Distance {
         double prod = Math.sqrt(sum);
         return prod;
     }
-    /**
-     * { function_description }
-     *
-     * @param      dict1  The dictionary 1
-     * @param      dict2  The dictionary 2
-     *
-     * @return     { description_of_the_return_value }
-     */
     public double DotProduct(Hashtable<String,Integer> dict1,
         Hashtable<String,Integer> dict2) {
         String key;
@@ -87,14 +61,6 @@ class Distance {
         }
         return sum;
     }
-    /**
-     * { function_description }
-     *
-     * @param      dictionary1  The dictionary 1
-     * @param      dictionary2  The dictionary 2
-     *
-     * @return     { description_of_the_return_value }
-     */
     public double similarity(Hashtable<String,Integer> dictionary1,
         Hashtable<String,Integer> dictionary2) {
         double a = Euclidean(dictionary1);
@@ -106,20 +72,11 @@ class Distance {
         return Math.round(result);
     }
 }
-/**
- * Class for solution.
- */
+
 class Solution {
     Solution () {
 
     }
-    /**
-     * { function_description }
-     *
-     * @param      args       The arguments
-     *
-     * @throws     Exception  { exception_description }
-     */
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         String foldername = scan.nextLine();
